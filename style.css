@@ -2355,6 +2355,15 @@ footer .footer-socials a:hover {
   display: block;
   max-height: 700px;
 }
+.project-image-frame {
+  display: block;
+  overflow: hidden;
+  border-radius: 32px;
+}
+.project-image-frame > img {
+  transform: scale(1.34);
+  transform-origin: right center;
+}
 /* Duplicate/old styles removed to allow new, larger project card styles to take effect */
 .project-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
 .project-content h3 { font-size: 1.3rem; margin-bottom: 10px; }

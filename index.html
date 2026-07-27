@@ -1,643 +1,575 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr@Gaweesh</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Primary Meta Tags -->
-<title>Muhammad Gaweesh | Frontend Developer & WordPress Expert</title>
-<meta name="title" content="Muhammad Gaweesh | Frontend Developer & WordPress Expert">
-<meta name="description" content="I'm Muhammad Gaweesh, a passionate developer from Egypt who turns complex ideas into clean, beautiful, and functional web designs using modern frontend tech and WordPress.">
-<meta name="keywords" content="Muhammad Gaweesh, frontend developer, WordPress developer, web designer, Egypt, UI designer, clean code, developer portfolio, HTML CSS JS, web developer Egypt">
-<meta name="author" content="Muhammad Gaweesh">
-<meta name="robots" content="index, follow">
-<meta name="language" content="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Contact & Profile -->
-<meta name="email" content="gawesh1112@gmail.com">
-<meta name="github" content="https://github.com/MGaweesh">
-<meta name="linkedin" content="https://www.linkedin.com/in/muhammad-gaweesh-780396174/">
-<meta name="facebook" content="https://www.facebook.com/mohamedgaweshking">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://drgaweesh.online/">
-<meta property="og:title" content="Muhammad Gaweesh | Frontend Developer">
-<meta property="og:description" content="Crafting beautiful, intuitive, and impactful websites. Check out my portfolio.">
-<meta property="og:image" content="https://drgaweesh.online/preview-image.jpg">
-<meta property="og:site_name" content="Muhammad Gaweesh Portfolio">
-<meta property="og:locale" content="en_US">
-
-<!-- Favicon -->
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5GTW243FDQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5GTW243FDQ');
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070a0c">
+  <title>Muhammad Gaweesh — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Senior Full-Stack Engineer and SaaS architect building secure, scalable products across healthcare, education, and commerce.">
+  <meta name="author" content="Muhammad Gaweesh">
+  <meta name="keywords" content="Muhammad Gaweesh, senior full stack engineer, SaaS architect, React, Next.js, Node.js, healthcare technology, Egypt">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Gaweesh — Senior Full-Stack Engineer">
+  <meta property="og:description" content="I turn complex product ideas into resilient, production-ready software.">
+  <meta property="og:image" content="image.jpg">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
+  <canvas id="networkCanvas" aria-hidden="true"></canvas>
+  <div class="scroll-hud" aria-hidden="true">
+    <span class="scroll-hud-label">SYSTEM / 00</span>
+    <div class="scroll-hud-track"><i></i></div>
+    <span class="scroll-hud-value">000%</span>
+  </div>
 
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-mark">MG<span>_</span></div>
+    <div class="loader-track"><span></span></div>
+    <p>initializing portfolio</p>
+  </div>
 
-    <div id="tsparticles"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
 
-    <nav>
-        <div class="container">
-            <a href="#" class="logo"><img src="logo.png" alt="Logo" class="site-logo">dr<span class="at-glow">@</span>Gaweesh</a>
-            <ul>
-                <li><a href="#hero" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="menu-toggle" id="menuIcon" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
-        </div>
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Muhammad Gaweesh — Home">
+      <span class="brand-mark brand-mark-logo" aria-hidden="true">
+        <svg class="brand-logo-symbol" viewBox="0 0 64 64">
+          <path class="logo-steam steam-a" d="M24 16c-5-5 5-7 0-13"></path>
+          <path class="logo-steam steam-b" d="M37 16c-5-5 5-7 0-13"></path>
+          <rect class="logo-monitor" x="7" y="18" width="45" height="35" rx="4"></rect>
+          <path class="logo-cup" d="M14 31h29v8c0 8-5 12-14 12S14 47 14 39z"></path>
+          <path class="logo-handle" d="M43 34h4c7 0 7 11 0 11h-4"></path>
+          <path class="logo-base" d="M20 58h24M27 53v5M37 53v5"></path>
+          <path class="logo-code" d="m11 25-4 3 4 3"></path>
+        </svg>
+      </span>
+      <span class="brand-copy"><strong>Muhammad Gaweesh</strong><small>Senior Full‑Stack Engineer</small></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <section id="hero">
-    <div class="container" style="position:relative; overflow:hidden;">
-        <div class="binary-bg"></div>
-        <h1 class="fade-in terminal-heading">// Hi, I'm <span>Muhammad Gaweesh</span><span class="terminal-cursor">█</span></h1>
-        <h2 class="fade-in terminal-sub">Full Stack Developer</h2>
-        <p class="fade-in terminal-desc">I build elegant, responsive, and user-friendly web applications from frontend to backend.</p>
-        <div class="hero-buttons fade-in">
-            <a href="mailto:gawesh1112@gmail.com" download class="btn btn-primary">Drink a cup of Tea?! ☕ </a>
+
+    <a class="header-cta magnetic" href="mailto:gawesh1112@gmail.com">
+      <span class="status-dot"></span> Available for a challenge
+    </a>
+
+    <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#work">01 / Work</a>
+    <a href="#expertise">02 / Expertise</a>
+    <a href="#about">03 / About</a>
+    <a href="#contact">04 / Contact</a>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+
+      <div class="hero-main">
+        <div class="eyebrow hero-reveal">
+          <span class="eyebrow-line"></span>
+          Cairo, Egypt <span class="eyebrow-separator">/</span> Building worldwide
         </div>
-        <div class="social-links fade-in">
-            <a href="https://github.com/MGaweesh" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/muhammad-gaweesh-780396174/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://fb.com/mohamedgaweshking" target="_blank"><i class="fab fa-facebook"></i></a>
+
+        <h1 class="hero-title" aria-label="I engineer software that survives growth">
+          <span class="title-line"><span>I engineer software</span></span>
+          <span class="title-line accent-line"><span>that survives growth.</span></span>
+        </h1>
+
+        <div class="hero-bottom hero-reveal">
+          <p class="hero-intro">
+            Senior Full‑Stack Engineer who owns the complete product journey—from system architecture and polished interfaces to secure APIs, data, and deployment.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="button button-primary magnetic">
+              Explore selected work
+              <span class="button-arrow">↘</span>
+            </a>
+            <a href="mailto:gawesh1112@gmail.com" class="text-link magnetic">Start a conversation <span>↗</span></a>
+          </div>
         </div>
-    </div>
-</section>
-    <section id="about">
-      <div class="matrix-overlay">
-        <span class="matrix-column">01000100ｵｱﾐﾆ01110010ｵｱ</span>
-        <span class="matrix-column">ﾐﾆ00100000ｵｱﾐﾆ01001101ｵｱ</span>
-        <span class="matrix-column">ﾐﾆ01110101ｵｱﾐﾆ01101000ｵｱ</span>
-        <span class="matrix-column">ﾐﾆ01100001ｵｱﾐﾆ01101101ｵｱ</span>
-        <span class="matrix-column">ﾐﾆ01101101ｵｱﾐﾆ01100001ｵｱ</span>
-        <span class="matrix-column">ﾐﾆ01100100ｵｱﾐﾆ00100000ｵｱ</span>
-        <span class="matrix-column">ﾐﾆ01000111ｵｱﾐﾆ01100001ｵｱ</span>
-        <span class="matrix-column">ﾐﾆ01110111ｵｱﾐﾆ01100101ｵｱ</span>
-        <span class="matrix-column">ﾐﾆ01100101ｵｱﾐﾆ01110011ｵｱ</span>
-        <span class="matrix-column">ﾐﾆ01101000ｵｱﾐﾆ</span>
       </div>
-      <div class="container fade-in">
-        <div class="matrix-photo">
-          <img src="image.jpg" alt="Muhammad Gaweesh" class="about-image" />
+
+      <aside class="hero-stage hero-reveal">
+        <canvas id="hero3DCanvas" aria-hidden="true"></canvas>
+        <div class="stage-orbit orbit-a"></div>
+        <div class="stage-orbit orbit-b"></div>
+        <div class="stage-coordinate coordinate-a">X / 42.019</div>
+        <div class="stage-coordinate coordinate-b">Y / 30.044</div>
+        <div class="system-panel" data-tilt>
+        <div class="panel-bar">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <span>production.system</span>
+          <span class="panel-live">LIVE</span>
         </div>
-        <div class="about-content">
-            <h2 class="section-title">About <span>Me</span></h2>
-            <h3>Full Stack Developer & Designer</h3>
-            <p>Hello! I'm Muhammad Gaweesh, a passionate full stack developer based in Egypt. With expertise in both frontend and backend technologies including React, Node.js, WordPress, and modern web frameworks, I love turning complex problems into simple, beautiful, and intuitive applications. My goal is to create work that is not only functional but also impactful. I drink tea — and that's when the ideas start flowing.</p>
+        <div class="panel-content">
+          <div class="terminal-line"><span>01</span><code>const engineer = new Senior({</code></div>
+          <div class="terminal-line"><span>02</span><code>&nbsp;&nbsp;scope: <b>“end-to-end”</b>,</code></div>
+          <div class="terminal-line"><span>03</span><code>&nbsp;&nbsp;focus: <b>“business impact”</b>,</code></div>
+          <div class="terminal-line"><span>04</span><code>&nbsp;&nbsp;standard: <b>“production-ready”</b></code></div>
+          <div class="terminal-line"><span>05</span><code>});</code></div>
+          <div class="terminal-line active-line"><span>06</span><code>engineer.ship();<i class="code-caret"></i></code></div>
+
+          <div class="architecture-stack">
+            <div class="stack-row">
+              <span>EXPERIENCE</span>
+              <div><b>React</b><b>Next.js</b><b>Motion</b></div>
+              <i>01</i>
+            </div>
+            <div class="stack-row">
+              <span>SERVICES</span>
+              <div><b>Node.js</b><b>REST</b><b>WebSocket</b></div>
+              <i>02</i>
+            </div>
+            <div class="stack-row">
+              <span>DATA</span>
+              <div><b>SQL</b><b>MongoDB</b><b>Redis</b></div>
+              <i>03</i>
+            </div>
+            <div class="stack-row">
+              <span>DELIVERY</span>
+              <div><b>Docker</b><b>CI/CD</b><b>Cloud</b></div>
+              <i>04</i>
+            </div>
+          </div>
+
+          <div class="build-status">
+            <span>BUILD STATUS</span>
+            <strong><i></i> ALL SYSTEMS OPERATIONAL</strong>
+          </div>
+        </div>
+        </div>
+        <div class="scene-caption">
+          <span><i></i> INTERACTIVE 3D SYSTEM</span>
+          <b>Move cursor / scroll page</b>
+        </div>
+        <button class="tea-signature" type="button" aria-label="Animate the Dr Gaweesh tea signature" data-tilt>
+          <span class="tea-mark" aria-hidden="true">
+            <svg class="tea-symbol" viewBox="0 0 64 64">
+              <path class="logo-steam steam-a" d="M24 16c-5-5 5-7 0-13"></path>
+              <path class="logo-steam steam-b" d="M37 16c-5-5 5-7 0-13"></path>
+              <rect class="logo-monitor" x="7" y="18" width="45" height="35" rx="4"></rect>
+              <path class="logo-cup" d="M14 31h29v8c0 8-5 12-14 12S14 47 14 39z"></path>
+              <path class="logo-handle" d="M43 34h4c7 0 7 11 0 11h-4"></path>
+              <path class="logo-base" d="M20 58h24M27 53v5M37 53v5"></path>
+              <path class="logo-code" d="m11 25-4 3 4 3"></path>
+            </svg>
+          </span>
+          <span class="tea-signature-copy">
+            <small>DR GAWEESH / SIGNATURE 01</small>
+            <strong>CODE IS BREWING</strong>
+          </span>
+          <span class="tea-live-dot" aria-hidden="true"></span>
+        </button>
+      </aside>
+
+      <div class="hero-metrics hero-reveal">
+        <div><strong data-count="8">0</strong><span>Products shipped</span></div>
+        <div><strong data-count="3">0</strong><span>SaaS platforms</span></div>
+        <div><strong data-count="4">0</strong><span>Business domains</span></div>
+        <div><strong>∞</strong><span>Ownership mindset</span></div>
+      </div>
+
+      <a href="#work" class="scroll-cue" aria-label="Scroll to selected work">
+        <span>SCROLL TO EXPLORE</span><i></i>
+      </a>
+    </section>
+
+    <div class="tech-marquee" aria-label="Technology expertise">
+      <div class="marquee-track">
+        <span>PRODUCT ENGINEERING</span><i>✦</i><span>SAAS ARCHITECTURE</span><i>✦</i><span>REACT / NEXT.JS</span><i>✦</i><span>NODE.JS</span><i>✦</i><span>AI INTEGRATION</span><i>✦</i><span>DEVOPS</span><i>✦</i>
+        <span>PRODUCT ENGINEERING</span><i>✦</i><span>SAAS ARCHITECTURE</span><i>✦</i><span>REACT / NEXT.JS</span><i>✦</i><span>NODE.JS</span><i>✦</i><span>AI INTEGRATION</span><i>✦</i><span>DEVOPS</span><i>✦</i>
+      </div>
+    </div>
+
+    <section class="manifesto-scene" id="manifesto" aria-labelledby="manifestoTitle">
+      <div class="manifesto-sticky">
+        <div class="manifesto-grid" aria-hidden="true"></div>
+        <div class="manifesto-topline">
+          <span>SCROLL-DRIVEN ENGINEERING SEQUENCE</span>
+          <b>00 / 03</b>
+        </div>
+        <div class="manifesto-copy">
+          <p class="section-kicker">FROM COMPLEXITY TO CLARITY</p>
+          <h2 id="manifestoTitle">
+            <span class="manifesto-word" data-manifesto-word="0">ARCHITECT.</span>
+            <span class="manifesto-word outline-word" data-manifesto-word="1">ENGINEER.</span>
+            <span class="manifesto-word accent-word" data-manifesto-word="2">SCALE.</span>
+          </h2>
+          <p class="manifesto-description">Senior ownership means seeing the entire system, making the hard trade-offs, and carrying the product safely into production.</p>
+        </div>
+        <div class="manifesto-visual" aria-hidden="true">
+          <div class="manifesto-cube">
+            <div class="cube-face cube-front"><span>01</span><strong>SYSTEM DESIGN</strong></div>
+            <div class="cube-face cube-back"><span>02</span><strong>PRODUCT LOGIC</strong></div>
+            <div class="cube-face cube-right"><span>03</span><strong>DATA</strong></div>
+            <div class="cube-face cube-left"><span>04</span><strong>SECURITY</strong></div>
+            <div class="cube-face cube-top"><span>05</span><strong>DELIVERY</strong></div>
+            <div class="cube-face cube-bottom"><span>06</span><strong>SCALE</strong></div>
+          </div>
+          <div class="cube-shadow"></div>
+          <div class="physics-orbit physics-orbit-one"><i></i></div>
+          <div class="physics-orbit physics-orbit-two"><i></i></div>
+        </div>
+        <div class="manifesto-telemetry">
+          <span><i></i> PHYSICS ENGINE ACTIVE</span>
+          <span>SCROLL VELOCITY <b data-velocity-readout>+0.00</b></span>
+          <span>FRAME SYNC <b>60HZ</b></span>
+        </div>
+        <div class="manifesto-progress"><i></i></div>
+      </div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker">01 / SELECTED WORK</p>
+          <h2>Systems, not just<br><em>screens.</em></h2>
+        </div>
+        <p>Products engineered around real workflows, measurable value, and the operational realities that appear after launch.</p>
+      </div>
+
+      <div class="projects">
+        <article class="project project-featured reveal" data-project-color="#6cf5c2">
+          <a class="project-visual" href="https://medcorex.org" target="_blank" rel="noopener">
+            <div class="browser-frame">
+              <div class="browser-top"><i></i><i></i><i></i><span>medcorex.org</span></div>
+              <img src="https://s0.wp.com/mshots/v1/https://medcorex.org?w=1200" alt="MedCoreX clinical platform preview" loading="lazy">
+            </div>
+            <span class="project-index">01</span>
+            <span class="view-project">VIEW LIVE ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-meta"><span>Healthcare SaaS</span><span>Architecture + Full Stack</span></div>
+            <h3>MedCoreX</h3>
+            <p>A clinical decision-support platform for pharmacists and medical teams—combining therapy monitoring, dosage calculation, antimicrobial stewardship, and AI-driven alerts.</p>
+            <ul class="impact-list">
+              <li><span>Challenge</span>Complex, safety-critical clinical workflows</li>
+              <li><span>Solution</span>Role-aware SaaS with automated decision support</li>
+              <li><span>Stack</span>React · Node.js · MongoDB · AI · Docker</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project reveal" data-project-color="#a8c7ff">
+          <a class="project-visual" href="https://sci-bridge.org" target="_blank" rel="noopener">
+            <div class="browser-frame">
+              <div class="browser-top"><i></i><i></i><i></i><span>sci-bridge.org</span></div>
+              <img src="https://s0.wp.com/mshots/v1/https://sci-bridge.org?w=1200" alt="Sci Bridge learning platform preview" loading="lazy">
+            </div>
+            <span class="project-index">02</span>
+            <span class="view-project">VIEW LIVE ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-meta"><span>EdTech SaaS</span><span>Product Engineering</span></div>
+            <h3>Sci Bridge</h3>
+            <p>An end-to-end scientific learning ecosystem with on-demand courses, interactive cases, live sessions, payments, email automation, and certificate generation.</p>
+            <ul class="impact-list">
+              <li><span>Scope</span>Learning, commerce, and operations in one system</li>
+              <li><span>Integrations</span>Jitsi · Kashier · Brevo · PDF automation</li>
+              <li><span>Focus</span>Reliable delivery and frictionless learning</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project reveal" data-project-color="#f5bf6c">
+          <a class="project-visual local-visual" href="https://obelisk-solutions.com/" target="_blank" rel="noopener">
+            <div class="browser-frame">
+              <div class="browser-top"><i></i><i></i><i></i><span>obelisk-solutions.com</span></div>
+              <img src="Ob.png" alt="Obelisk Solutions website preview" loading="lazy">
+            </div>
+            <span class="project-index">03</span>
+            <span class="view-project">VIEW LIVE ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-meta"><span>Global Consulting</span><span>Digital Experience</span></div>
+            <h3>Obelisk Solutions</h3>
+            <p>A focused corporate experience for an international consulting firm, designed to communicate complex services clearly and turn qualified traffic into conversations.</p>
+            <ul class="impact-list">
+              <li><span>Challenge</span>Communicate a broad global service portfolio</li>
+              <li><span>Solution</span>Clear information architecture and conversion paths</li>
+              <li><span>Focus</span>Brand authority · Multilingual · Lead generation</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="more-work reveal">
+        <div class="more-work-head">
+          <p>MORE SHIPPED PRODUCTS</p>
+          <span>Different markets. Same engineering discipline.</span>
+        </div>
+        <div class="project-table legacy-project-table">
+          <a href="https://mamlakty.com/" target="_blank" rel="noopener"><span>04</span><strong>Mamlakty</strong><em>E-commerce / SEO / Performance</em><b>↗</b></a>
+          <a href="https://profamalkamal.com/" target="_blank" rel="noopener"><span>05</span><strong>Prof. Amal Kamal</strong><em>Academic Platform / Content System</em><b>↗</b></a>
+          <a href="https://bta3al3ab.online/" target="_blank" rel="noopener"><span>06</span><strong>Techno Core</strong><em>Gaming Discovery / PHP / MySQL</em><b>↗</b></a>
+          <a href="https://ahmedos.pages.dev/" target="_blank" rel="noopener"><span>07</span><strong>Dr. Ahmed Osama</strong><em>Personal Brand / Web Experience</em><b>↗</b></a>
+          <a href="https://drmyahia.pages.dev/" target="_blank" rel="noopener"><span>08</span><strong>Dr. Mohamed Yahia</strong><em>Medical Portfolio / Booking</em><b>↗</b></a>
+        </div>
+        <div class="project-vault">
+          <a class="vault-card reveal-child" href="https://mamlakty.com/" target="_blank" rel="noopener" data-depth-card>
+            <div class="vault-media"><img src="ma.jpg" alt="Mamlakty e-commerce platform" loading="lazy"><span>04 / COMMERCE</span><i>VIEW LIVE &nearr;</i></div>
+            <div class="vault-content">
+              <small>E-COMMERCE SYSTEM</small><h3>Mamlakty</h3>
+              <p>A mobile-first shopping experience for mothers and children, engineered around discoverability, fast product journeys, and simple store operations.</p>
+              <div><b>WooCommerce</b><b>Payments</b><b>SEO</b><b>Performance</b></div>
+            </div>
+          </a>
+          <a class="vault-card reveal-child" href="https://profamalkamal.com/" target="_blank" rel="noopener" data-depth-card>
+            <div class="vault-media"><img src="prof.png" alt="Prof. Amal Kamal academic platform" loading="lazy"><span>05 / ACADEMIC</span><i>VIEW LIVE &nearr;</i></div>
+            <div class="vault-content">
+              <small>KNOWLEDGE PLATFORM</small><h3>Prof. Amal Kamal</h3>
+              <p>A bilingual academic hub that turns research, lectures, training opportunities, and professional news into a clear publishing system.</p>
+              <div><b>CMS</b><b>Arabic RTL</b><b>Content IA</b><b>SEO</b></div>
+            </div>
+          </a>
+          <a class="vault-card reveal-child techno-core-card" href="https://bta3al3ab.online/" target="_blank" rel="noopener" data-depth-card>
+            <div class="vault-media"><img src="techno-core.png" alt="Techno Core gaming discovery platform" loading="lazy"><span>06 / GAMING ENGINE</span><i>VIEW LIVE &nearr;</i></div>
+            <div class="vault-content">
+              <small>GAMING DISCOVERY PLATFORM</small><h3>Techno Core</h3>
+              <p>A cinematic Arabic gaming hub for discovering games, movies, system requirements, communities, and curated entertainment content.</p>
+              <div><b>JavaScript</b><b>PHP</b><b>MySQL</b><b>Arabic UX</b></div>
+            </div>
+          </a>
+          <a class="vault-card reveal-child" href="https://ahmedos.pages.dev/" target="_blank" rel="noopener" data-depth-card>
+            <div class="vault-media"><img src="ah.jpg" alt="Dr. Ahmed Osama portfolio" loading="lazy"><span>07 / PORTFOLIO</span><i>VIEW LIVE &nearr;</i></div>
+            <div class="vault-content">
+              <small>PERSONAL BRAND SYSTEM</small><h3>Dr. Ahmed Osama</h3>
+              <p>A fast professional presence designed to communicate expertise instantly and create a direct path for recruiters and collaborators.</p>
+              <div><b>UX Strategy</b><b>Frontend</b><b>Performance</b><b>Cloudflare</b></div>
+            </div>
+          </a>
+          <a class="vault-card reveal-child" href="https://drmyahia.pages.dev/" target="_blank" rel="noopener" data-depth-card>
+            <div class="vault-media"><img src="mo.jpg" alt="Dr. Mohamed Yahia medical website" loading="lazy"><span>08 / MEDICAL</span><i>VIEW LIVE &nearr;</i></div>
+            <div class="vault-content">
+              <small>MEDICAL WEB EXPERIENCE</small><h3>Dr. Mohamed Yahia</h3>
+              <p>A trusted medical presence combining professional information, patient resources, and conversion-focused contact and booking paths.</p>
+              <div><b>Medical UX</b><b>Booking</b><b>Responsive</b><b>Edge Deploy</b></div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
-    <section id="skills">
-    <h2 class="section-title fade-in">My <span>Skills</span></h2>
-    <div class="container">
-        <div class="skills-grid fade-in">
-            <div class="skill-item skill-html5"> 
-                <i class="fab fa-html5"></i> 
-                <p>HTML5</p>
-                <div class="skill-progress">
-                    <div class="progress-bar" data-width="95"></div>
-                </div>
-            </div>
-            <div class="skill-item skill-css3"> 
-                <i class="fab fa-css3-alt"></i> 
-                <p>CSS3</p>
-                <div class="skill-progress">
-                    <div class="progress-bar" data-width="90"></div>
-                </div>
-            </div>
-            <div class="skill-item skill-js"> 
-                <i class="fab fa-js"></i> 
-                <p>JavaScript</p>
-                <div class="skill-progress">
-                    <div class="progress-bar" data-width="90"></div>
-                </div>
-            </div>
-            <div class="skill-item skill-react"> 
-                <i class="fab fa-react"></i> 
-                <p>React.js</p>
-                <div class="skill-progress">
-                    <div class="progress-bar" data-width="85"></div>
-                </div>
-            </div>
-            <div class="skill-item skill-wordpress"> 
-                <i class="fab fa-wordpress"></i> 
-                <p>WordPress</p>
-                <div class="skill-progress">
-                    <div class="progress-bar" data-width="95"></div>
-                </div>
-            </div>
-<div class="skill-item skill-woo">
-                <i class="fab fa-wordpress-simple"></i>
-                <p>WooCommerce</p>
-                <div class="skill-progress">
-                    <div class="progress-bar" data-width="90"></div>
-                </div>
-            </div>
-            <div class="skill-item skill-python"> 
-                <i class="fab fa-python"></i> 
-                <p>Python</p>
-                <div class="skill-progress">
-                    <div class="progress-bar" data-width="75"></div>
-                </div>
-            </div>
-            <div class="skill-item skill-nodejs"> 
-                <i class="fab fa-node-js"></i> 
-                <p>Node.js</p>
-                <div class="skill-progress">
-                    <div class="progress-bar" data-width="85"></div>
-                </div>
-            </div>
-            <div class="skill-item skill-mongodb"> 
-                <i class="fas fa-database"></i> 
-                <p>MongoDB</p>
-                <div class="skill-progress">
-                    <div class="progress-bar" data-width="80"></div>
-                </div>
-            </div>
-            <div class="skill-item skill-express"> 
-                <i class="fas fa-server"></i> 
-                <p>Express.js</p>
-                <div class="skill-progress">
-                    <div class="progress-bar" data-width="85"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <section id="services">
-    <h2 class="section-title fade-in">My <span>Services</span></h2>
-    <div class="container glass">
-        <div class="services-grid fade-in">
-            <div class="service-card featured">
-                <div class="service-badge">Most Popular</div>
-                <div class="service-icon">
-                    <i class="fas fa-layer-group"></i>
-                </div>
-                <h3>Full Stack Development</h3>
-                <p>Complete web applications from frontend to backend using React, Node.js, databases, and modern frameworks. End-to-end solutions with clean code and optimal performance.</p>
-                <div class="service-features">
-                    <span>Frontend & Backend</span>
-                    <span>Database Integration</span>
-                    <span>API Development</span>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-desktop"></i>
-                </div>
-                <h3>Frontend Development</h3>
-                <p>Modern, responsive user interfaces with interactive elements and smooth animations. Building engaging user experiences with the latest frontend technologies.</p>
-                <div class="service-features">
-                    <span>React.js</span>
-                    <span>HTML5/CSS3</span>
-                    <span>JavaScript</span>
-                    <span>Bootstrap</span>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h3>Backend Development</h3>
-                <p>Robust server-side applications, APIs, and database management systems. Secure and scalable backend solutions for your applications.</p>
-                <div class="service-features">
-                    <span>Node.js</span>
-                    <span>Express.js</span>
-                    <span>MongoDB</span>
-                    <span>RESTful APIs</span>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fab fa-wordpress"></i>
-                </div>
-                <h3>WordPress Development</h3>
-                <p>Custom WordPress themes, plugins, and e-commerce solutions. From simple blogs to complex business websites with full backend integration.</p>
-                <div class="service-features">
-                    <span>Custom Themes</span>
-                    <span>E-commerce Setup</span>
-                    <span>Plugin Development</span>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-                <h3>E-commerce Solutions</h3>
-                <p>Complete online stores with WooCommerce, payment integration, inventory management, and full-stack e-commerce solutions.</p>
-                <div class="service-features">
-                    <span>WooCommerce</span>
-                    <span>Payment Gateways</span>
-                    <span>Full Stack Integration</span>
-                </div>
-</div>
-        </div>
-    </div>
-</section>
-    <section id="projects">
-    <h2 class="section-title fade-in">My <span>Projects</span></h2>
-    <div class="container glass">
-        <div class="projects-grid fade-in">
-            <!-- Project 1: Bta3al3ab.online -->
-            <div class="project-card fade-in" data-project="bta3al3ab">
-                <a href="#" class="project-link project-image-frame" data-project="bta3al3ab">
-                    <img src="https://s0.wp.com/mshots/v1/https://bta3al3ab.online?w=800" 
-                         onerror="this.src='https://image.thum.io/get/width/800/crop/600/https://bta3al3ab.online'; this.onerror=null;" 
-                         alt="Bta3al3ab.online" 
-                         style="filter: brightness(0.75) contrast(1.2) saturate(0.9);" />
-                </a>
-                <div class="project-content">
-                    <h3>Bta3al3ab.online</h3>
-                    <p>منصة ألعاب إلكترونية شاملة تقدم مجموعة متنوعة من الألعاب عبر الإنترنت تشمل الألعاب التعليمية، ألعاب البنات، ألعاب الأولاد، وألعاب الذكاء. تم تطويرها باستخدام HTML5، CSS3، JavaScript، PHP، MySQL مع دعم الوضع الداكن وواجهة مستخدم عصرية.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link" data-project="bta3al3ab">View Details <i class="fas fa-info-circle"></i></a>
-                        <a href="https://bta3al3ab.online" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 2: Prof Amal Kamal -->
-            <div class="project-card fade-in" data-project="prof-amal">
-                <a href="#" class="project-link" data-project="prof-amal">
-                    <img src="prof.png" alt="Prof Amal Kamal" />
-                </a>
-                <div class="project-content">
-                    <h3>Prof Amal Kamal</h3>
-                    <p>Professional academic website for Prof. Amal Kamal, Vice Dean for Graduate Studies and member of the Pharmacy Syndicate Council. Features news, research publications, lectures, training opportunities, and educational resources for pharmacy students and professionals.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link" data-project="prof-amal">View Details <i class="fas fa-info-circle"></i></a>
-                        <a href="https://profamalkamal.com/" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 2: Obelisk Solutions -->
-            <div class="project-card fade-in" data-project="obelisk">
-                <a href="#" class="project-link" data-project="obelisk">
-                    <img src="Ob.png" alt="Obelisk Solutions" />
-                </a>
-                <div class="project-content">
-                    <h3>Obelisk Solutions</h3>
-                    <p>A corporate website built for Obelisk Solutions, a global consulting firm specializing in international business services. The project features a clean, professional design with clear service segmentation, multi-language support, and conversion-optimized contact flows to support global client acquisition.
 
-                    </p>
-                    <div class="project-links">
-                        <a href="#" class="project-link" data-project="obelisk">View Details <i class="fas fa-info-circle"></i></a>
-                        <a href="https://obelisk-solutions.com/" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more projects below -->
-            <div class="project-card fade-in" data-project="mamlakty">
-                <a href="#" class="project-link" data-project="mamlakty">
-                    <img src="ma.jpg" alt="Mamlakty.com" />
-                </a>
-                <div class="project-content">
-                    <h3>Mamlakty.com</h3>
-                    <p>An elegant e-commerce platform tailored for moms and kids. Mamlakty offers a curated selection of lunchboxes, school supplies, and personalized accessories. The site features clean UI/UX, SEO optimization, and fast, mobile-first performance for a seamless shopping experience.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link" data-project="mamlakty">View Details <i class="fas fa-info-circle"></i></a>
-                        <a href="https://mamlakty.com/" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in" data-project="ahmed-osama">
-                <a href="#" class="project-link" data-project="ahmed-osama">
-                    <img src="ah.jpg" alt="Ah" />
-                </a>
-                <div class="project-content">
-                    <h3>Dr Ahmed Osama</h3>
-                    <p>A personal portfolio site for Dr Ahmed Osama. Built to highlight his skills, projects, and contact details in a modern, fast-loading, and visually engaging format optimized for recruiters and collaborators.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link" data-project="ahmed-osama">View Details <i class="fas fa-info-circle"></i></a>
-                        <a href="https://ahmedos.pages.dev/" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in" data-project="mohamed-yahia">
-                <a href="#" class="project-link" data-project="mohamed-yahia">
-                    <img src="mo.jpg" alt="Mo" />
-                </a>
-                <div class="project-content">
-                    <h3>Dr Mohamed Yahia</h3>
-                    <p>Professional medical and personal website for Dr. Mohamed Yahia, providing information, booking, and resources for patients and visitors.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link" data-project="mohamed-yahia">View Details <i class="fas fa-info-circle"></i></a>
-                        <a href="https://drmyahia.pages.dev/" target="_blank">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
+    <section class="section expertise-section" id="expertise">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker">02 / ENGINEERING DEPTH</p>
+          <h2>From ambiguity<br>to <em>production.</em></h2>
         </div>
-    </div>
-</section>
-    <section id="testimonials">
-    <h2 class="section-title fade-in">Client <span>Reviews</span></h2>
-    <div class="container glass">
-        <div class="testimonials-grid fade-in">
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Working with Muhammad was a great experience. He delivered my portfolio website on time and within budget. The site loads fast and looks professional. I've received many compliments from colleagues about the design."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-info">
-                        <h4>Dr. Ahmed Osama</h4>
-                        <span>Medical Professional</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Starting an online business was overwhelming, but Muhammad made it simple. He built our store for kids' products and taught me how to manage it. The website looks great and my customers can easily find what they need. He was always available to help with questions."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-info">
-                        <h4>Sarah Ahmed</h4>
-                        <span>Business Owner, Mamlakty</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"We needed a professional website for our consulting services. Muhammad understood our requirements and delivered exactly what we needed. The site represents our brand well and has helped us attract new clients."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-info">
-                        <h4>Obelisk Solutions</h4>
-                        <span>International Consulting Firm</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"I needed a website to share my research and connect with students and colleagues. Muhammad created a beautiful, professional site that showcases my work perfectly. The Arabic content displays correctly and the site is easy to update. My students love being able to access my lectures and research papers online."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-info">
-                        <h4>Prof. Amal Kamal</h4>
-                        <span>Vice Dean for Graduate Studies, Pharmacy College</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Muhammad built my professional portfolio website and did an excellent job. The design is modern and clean, and it loads very fast. He was responsive to my feedback and made all the changes I requested. The website has helped me showcase my work effectively to potential clients and collaborators."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-info">
-                        <h4>Dr. Mohamed Yahia</h4>
-                        <span>Medical Professional</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        <p>Senior engineering is less about knowing every library and more about making the right trade-offs—then owning the outcome.</p>
+      </div>
 
-<!-- Project Modal -->
-<div id="projectModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="modal-header">
-            <img id="modalImage" src="" alt="">
-            <div class="modal-title">
-                <h2 id="modalTitle"></h2>
-                <p id="modalCategory"></p>
-            </div>
+      <div class="architecture-lab reveal">
+        <div class="lab-copy">
+          <p class="section-kicker">LIVE SYSTEM MODEL</p>
+          <h3>Architecture<br>you can <em>see.</em></h3>
+          <p>Every product is a connected system. Scroll and move your cursor to inspect the layers I own from interface to infrastructure.</p>
+          <div class="lab-status"><span><i></i> MODEL ONLINE</span><b>4 LAYERS / 16 CAPABILITIES</b></div>
         </div>
-        <div class="modal-body">
-            <div class="modal-section">
-                <h3>Project Overview</h3>
-                <p id="modalDescription"></p>
-            </div>
-            <div class="modal-section">
-                <h3>Technologies Used</h3>
-                <div id="modalTech" class="tech-tags"></div>
-            </div>
-            <div class="modal-section">
-                <h3>Key Features</h3>
-                <ul id="modalFeatures"></ul>
-            </div>
-            <div class="modal-section">
-                <h3>Project Details</h3>
-                <div class="project-details">
-                    <div class="detail-item">
-                        <span class="detail-label">Duration:</span>
-                        <span id="modalDuration"></span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Client:</span>
-                        <span id="modalClient"></span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Status:</span>
-                        <span id="modalStatus"></span>
-                    </div>
-                </div>
-            </div>
+        <div class="stack-3d" id="architecture3D" aria-label="Interactive four-layer software architecture model">
+          <div class="stack-platform platform-ui"><span>01</span><strong>EXPERIENCE</strong><small>React / Next.js / Motion / Accessibility</small><i></i></div>
+          <div class="stack-platform platform-api"><span>02</span><strong>APPLICATION</strong><small>Node.js / REST / Realtime / Workflows</small><i></i></div>
+          <div class="stack-platform platform-data"><span>03</span><strong>INTELLIGENCE</strong><small>SQL / MongoDB / Cache / AI</small><i></i></div>
+          <div class="stack-platform platform-cloud"><span>04</span><strong>INFRASTRUCTURE</strong><small>Docker / CI-CD / Cloud / Observability</small><i></i></div>
+          <div class="stack-core"><b>MG</b><span>SYSTEM<br>CORE</span></div>
+          <div class="stack-beam"></div>
+          <div class="stack-flow"><i></i><i></i><i></i><i></i></div>
+          <div class="stack-orbit"><i></i><i></i><i></i></div>
+          <div class="stack-telemetry"><span>LATENCY / 42MS</span><span>UPTIME / 99.9%</span><span>EVENTS / LIVE</span></div>
         </div>
-        <div class="modal-footer">
-            <a id="modalLiveLink" href="#" target="_blank" class="btn btn-primary">
-                <i class="fas fa-external-link-alt"></i> View Live Site
-            </a>
-        </div>
-    </div>
-</div>
+      </div>
 
-    <section id="contact">
-    <div class="fade-in">
-        <h2 class="section-title">Get In <span>Touch</span></h2>
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-intro">
-                    <h3>Let's Build Something Amazing Together</h3>
-                    <p>I'm always open to discussing new projects, creative ideas, opportunities, or even just have a cup of tea. Whether you need a full-stack application, WordPress site, or e-commerce solution, let's start a conversation!</p>
-                    <div class="contact-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24h</span>
-                            <span class="stat-label">Response Time</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Client Satisfaction</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-content">
-                    <div class="contact-form-section glass">
-                        <h4><i class="fas fa-paper-plane"></i> Send Me a Message</h4>
-                        <form class="contact-form" id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                                    <label for="name"><i class="fas fa-user"></i> Name</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <select id="service" name="service" required>
-                                    <option value="">Select a service</option>
-                                    <option value="fullstack">Full Stack Development</option>
-                                    <option value="frontend">Frontend Development</option>
-                                    <option value="backend">Backend Development</option>
-                                    <option value="wordpress">WordPress Development</option>
-                                    <option value="ecommerce">E-commerce Solutions</option>
-                                    <option value="consultation">Consultation</option>
-                                    <option value="other">Other</option>
-                                </select>
-                                <label for="service"><i class="fas fa-cogs"></i> Service Needed</label>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
-                                <label for="message"><i class="fas fa-comment"></i> Message</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary contact-submit">
-                                <span class="btn-text">
-                                    <i class="fas fa-paper-plane"></i> Send Message
-                                </span>
-                                <span class="btn-loading" style="display: none;">
-                                    <i class="fas fa-spinner fa-spin"></i> Sending...
-                                </span>
-                            </button>
-                        </form>
-                    </div>
-                    
-                    <div class="contact-info-section">
-                        <div class="contact-info glass">
-                            <h4><i class="fas fa-info-circle"></i> Contact Information</h4>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-label">Email</span>
-                                    <span class="contact-value">gawesh1112@gmail.com</span>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-label">Location</span>
-                                    <span class="contact-value">Egypt</span>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-label">Availability</span>
-                                    <span class="contact-value">Available for projects</span>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <span class="contact-label">Response Time</span>
-                                    <span class="contact-value">Within 24 hours</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="social-contact glass">
-                            <h4><i class="fas fa-share-alt"></i> Connect With Me</h4>
-                            <div class="social-links-contact">
-                                <a href="https://github.com/MGaweesh" target="_blank" class="social-link">
-                                    <i class="fab fa-github"></i>
-                                    <span>GitHub</span>
-                                </a>
-                                <a href="https://linkedin.com/in/muhammad-gaweesh-780396174/" target="_blank" class="social-link">
-                                    <i class="fab fa-linkedin"></i>
-                                    <span>LinkedIn</span>
-                                </a>
-                                <a href="https://fb.com/mohamedgaweshking" target="_blank" class="social-link">
-                                    <i class="fab fa-facebook"></i>
-                                    <span>Facebook</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="capability-grid">
+        <article class="capability reveal" data-tilt>
+          <span class="cap-number">01</span>
+          <div class="cap-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 13h32M8 24h32M8 35h19"/><circle cx="34" cy="35" r="6"/></svg></div>
+          <h3>Product Architecture</h3>
+          <p>Translate business constraints into maintainable boundaries, pragmatic technical choices, and a roadmap that keeps teams moving.</p>
+          <div class="cap-tags"><span>System Design</span><span>SaaS</span><span>Multi-tenant</span><span>RBAC</span></div>
+        </article>
+
+        <article class="capability reveal" data-tilt>
+          <span class="cap-number">02</span>
+          <div class="cap-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="28" rx="3"/><path d="m15 20 6 5-6 5m10 0h9M18 40h12"/></svg></div>
+          <h3>End-to-End Delivery</h3>
+          <p>Build coherent experiences across frontend, backend, data, and infrastructure—with quality owned across every layer.</p>
+          <div class="cap-tags"><span>React</span><span>Next.js</span><span>Node.js</span><span>TypeScript</span></div>
+        </article>
+
+        <article class="capability reveal" data-tilt>
+          <span class="cap-number">03</span>
+          <div class="cap-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 40 14v20L24 43 8 34V14z"/><path d="m8 14 16 10 16-10M24 24v19"/></svg></div>
+          <h3>Scalable Foundations</h3>
+          <p>Design APIs, data models, queues, caching, and real-time flows that remain observable and predictable as usage grows.</p>
+          <div class="cap-tags"><span>REST</span><span>WebSocket</span><span>SQL</span><span>MongoDB</span></div>
+        </article>
+
+        <article class="capability reveal" data-tilt>
+          <span class="cap-number">04</span>
+          <div class="cap-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 30a9 9 0 0 1 3-17 13 13 0 0 1 24 5 7 7 0 0 1 0 14H14"/><path d="m18 31 5 5 9-12"/></svg></div>
+          <h3>Production Operations</h3>
+          <p>Ship with security, automated delivery, monitoring, graceful failures, and a deployment story the next engineer can trust.</p>
+          <div class="cap-tags"><span>Docker</span><span>CI/CD</span><span>Cloud</span><span>Observability</span></div>
+        </article>
+      </div>
+
+      <div class="engineering-loop reveal">
+        <div class="loop-copy">
+          <p class="section-kicker">HOW I OPERATE</p>
+          <h3>A clear engineering loop.</h3>
+          <p>Each phase reduces a different kind of risk—product, technical, delivery, then operational.</p>
         </div>
+        <div class="loop-steps">
+          <div class="loop-step active"><span>01</span><strong>DISCOVER</strong><small>Understand the real constraint</small></div>
+          <div class="loop-step"><span>02</span><strong>ARCHITECT</strong><small>Make trade-offs explicit</small></div>
+          <div class="loop-step"><span>03</span><strong>BUILD</strong><small>Ship in useful increments</small></div>
+          <div class="loop-step"><span>04</span><strong>HARDEN</strong><small>Test the unhappy paths</small></div>
+          <div class="loop-step"><span>05</span><strong>EVOLVE</strong><small>Measure, learn, improve</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-layout">
+        <div class="portrait-wrap profile-stage reveal">
+          <div class="profile-orbit orbit-profile-a"></div>
+          <div class="profile-orbit orbit-profile-b"></div>
+          <div class="portrait-frame" data-tilt>
+            <img src="image.jpg" alt="Muhammad Gaweesh" loading="lazy">
+            <div class="portrait-grid"></div>
+            <div class="face-lock"><i></i><i></i><i></i><i></i></div>
+            <div class="portrait-scan"></div>
+          </div>
+          <div class="profile-chip profile-chip-one"><span>ROLE</span><strong>SENIOR FULL-STACK</strong></div>
+          <div class="profile-chip profile-chip-two"><span>BASE</span><strong>CAIRO / WORLDWIDE</strong></div>
+          <div class="profile-chip profile-chip-three"><i></i><strong>AVAILABLE</strong></div>
+          <div class="portrait-label"><span>PROFILE / 001</span><strong>MUHAMMAD GAWEESH</strong></div>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="section-kicker">03 / THE ENGINEER BEHIND THE WORK</p>
+          <h2>I care about what happens <em>after</em> the demo.</h2>
+          <p class="about-lead">I’m Muhammad—a product-minded full-stack engineer based in Egypt. I’m at my best when the brief is complex, the requirements are still moving, and the product needs someone to connect every technical decision to a real business outcome.</p>
+          <p>I work across healthcare technology, education, commerce, and service businesses. That range taught me to enter unfamiliar domains quickly, ask sharper questions, and design software around people—not around a trendy stack.</p>
+
+          <div class="principles">
+            <div><span>01</span><strong>Clarity over cleverness</strong><p>The next engineer should understand the system without a treasure map.</p></div>
+            <div><span>02</span><strong>Ship, observe, improve</strong><p>Production feedback is part of engineering—not the end of it.</p></div>
+            <div><span>03</span><strong>Own the outcome</strong><p>A feature isn’t done until it creates the intended value reliably.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-strip reveal">
+        <div class="quote-mark">“</div>
+        <blockquote>
+          <p id="quoteText">Muhammad understood our requirements and delivered exactly what we needed. The site represents our brand well and has helped us attract new clients.</p>
+          <footer><strong id="quoteAuthor">Obelisk Solutions</strong><span id="quoteRole">International Consulting Firm</span></footer>
+        </blockquote>
+        <div class="quote-controls">
+          <button id="quotePrev" aria-label="Previous testimonial">←</button>
+          <span><b id="quoteIndex">01</b> / 03</span>
+          <button id="quoteNext" aria-label="Next testimonial">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section contact-control" id="contact">
+      <div class="contact-grid" aria-hidden="true"></div>
+      <div class="contact-reactor" aria-hidden="true">
+        <div class="reactor-ring reactor-ring-a"><i></i></div>
+        <div class="reactor-ring reactor-ring-b"><i></i></div>
+        <div class="reactor-ring reactor-ring-c"><i></i></div>
+        <div class="reactor-core"><span>OPEN</span><b>TO BUILD</b></div>
+      </div>
+      <div class="contact-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="contact-inner reveal">
+        <p class="section-kicker">04 / NEXT SYSTEM</p>
+        <h2>Let&rsquo;s engineer the<br>next <em>impossible.</em></h2>
+        <p>Bring the complex brief. I&rsquo;ll bring product thinking, engineering depth, and the ownership to move it safely into production.</p>
+        <div class="project-types" aria-label="Project specialities">
+          <span>SaaS platforms</span><span>Healthcare tech</span><span>AI integration</span><span>System rescue</span>
+        </div>
+        <a class="contact-button magnetic" href="mailto:gawesh1112@gmail.com">
+          <span>START A CONVERSATION</span><i>&nearr;</i>
+        </a>
+        <div class="contact-details">
+          <a href="mailto:gawesh1112@gmail.com">gawesh1112@gmail.com</a>
+          <span>Cairo, Egypt &middot; Remote worldwide</span>
+        </div>
+      </div>
+      <div class="contact-console reveal" data-tilt>
+        <div class="console-bar"><div class="window-dots"><i></i><i></i><i></i></div><span>project.intake</span><b>SECURE</b></div>
+        <div class="console-body">
+          <div class="console-status"><span><i></i> ACCEPTING SELECT PROJECTS</span><b>Q3 / 2026</b></div>
+          <p>Tell me where the product is today and where it needs to go. I&rsquo;ll respond with the clearest next step.</p>
+          <div class="console-rows">
+            <div><span>01</span><strong>Architecture &amp; technical direction</strong><i>READY</i></div>
+            <div><span>02</span><strong>End-to-end product engineering</strong><i>READY</i></div>
+            <div><span>03</span><strong>Performance &amp; platform rescue</strong><i>READY</i></div>
+          </div>
+          <a href="mailto:gawesh1112@gmail.com?subject=New%20project%20brief" class="console-action"><span>OPEN PROJECT CHANNEL</span><i>&rarr;</i></a>
+          <div class="console-foot"><span>RESPONSE TARGET / 24H</span><span>TIMEZONE / UTC+2</span></div>
+        </div>
+      </div>
+      <div class="contact-ticker" aria-hidden="true">
+        <div><span>ARCHITECTURE</span><i>&#10022;</i><span>PRODUCT ENGINEERING</span><i>&#10022;</i><span>AI SYSTEMS</span><i>&#10022;</i><span>SAAS</span><i>&#10022;</i><span>DEVOPS</span><i>&#10022;</i><span>ARCHITECTURE</span><i>&#10022;</i><span>PRODUCT ENGINEERING</span><i>&#10022;</i><span>AI SYSTEMS</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-logo-lockup" href="#home" aria-label="Dr Gaweesh — back to home">
+      <span class="footer-logo-crop">
+        <svg class="footer-wordmark-svg" viewBox="0 0 430 118" role="img" aria-label="Muhammad Gaweesh — Senior Full-Stack Engineer">
+          <g class="footer-symbol" transform="translate(12 14) scale(1.35)">
+            <path class="logo-steam steam-a" d="M24 16c-5-5 5-7 0-13"></path>
+            <path class="logo-steam steam-b" d="M37 16c-5-5 5-7 0-13"></path>
+            <rect class="logo-monitor" x="7" y="18" width="45" height="35" rx="4"></rect>
+            <path class="logo-cup" d="M14 31h29v8c0 8-5 12-14 12S14 47 14 39z"></path>
+            <path class="logo-handle" d="M43 34h4c7 0 7 11 0 11h-4"></path>
+            <path class="logo-base" d="M20 58h24M27 53v5M37 53v5"></path>
+          </g>
+          <text class="footer-code-tag" x="110" y="35">&lt;/&gt;</text>
+          <text class="footer-logo-name" x="110" y="70">MUHAMMAD GAWEESH</text>
+          <text class="footer-logo-role" x="112" y="93">SENIOR FULL-STACK ENGINEER / CAIRO</text>
+          <path class="footer-logo-trace" d="M112 104h245l18-10h38"></path>
+          <circle class="footer-logo-node" cx="413" cy="94" r="3"></circle>
+        </svg>
+      </span>
+    </a>
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">MG</span><span class="brand-copy"><strong>Muhammad Gaweesh</strong><small>Senior Full‑Stack Engineer</small></span></a>
+    <p class="footer-statement">Engineering resilient products<br>from first principle to production.</p>
+    <div class="footer-links">
+      <a href="https://github.com/MGaweesh" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://linkedin.com/in/muhammad-gaweesh-780396174/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://fb.com/mohamedgaweshking" target="_blank" rel="noopener">Facebook ↗</a>
     </div>
-</section>
-    <footer>
-        <div class="container">
-            <p class="footer-slogan">"Tea in hand, Code on fire — Ideas everywhere." ☕💻</p>
-            <p>&copy; 2025 Dr@Gaweesh. All Rights Reserved.</p>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="script.js"></script>
+    <div class="footer-system">
+      <span><i></i> ALL SYSTEMS OPERATIONAL</span>
+      <b>CAIRO / <time id="cairoTime">00:00:00</time></b>
+    </div>
+    <a class="back-to-top magnetic" href="#home"><span>BACK TO TOP</span><i>&uarr;</i></a>
+    <p class="footer-copyright">© <span id="year"></span> Muhammad Gaweesh. Engineered with intent.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070a0c">
+  <title>Dr. Muhammad Gaweesh — Full-Stack Developer</title>
+  <meta name="description" content="Doctor and full-stack developer building clear, useful digital products across healthcare, education, and commerce.">
+  <meta name="author" content="Muhammad Gaweesh">
+  <meta name="keywords" content="Dr. Muhammad Gaweesh, full stack developer, doctor, React, Next.js, Node.js, healthcare technology, Egypt">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dr. Muhammad Gaweesh — Full-Stack Developer">
+  <meta property="og:description" content="I turn useful ideas into clear, practical digital products.">
+  <meta property="og:image" content="image.jpg">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <canvas id="networkCanvas" aria-hidden="true"></canvas>
+  <div class="scroll-hud" aria-hidden="true">
+    <span class="scroll-hud-label">SYSTEM / 00</span>
+    <div class="scroll-hud-track"><i></i></div>
+    <span class="scroll-hud-value">000%</span>
+  </div>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-mark">MG<span>_</span></div>
+    <div class="loader-track"><span></span></div>
+    <p>initializing portfolio</p>
+  </div>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Muhammad Gaweesh — Home">
+      <span class="brand-mark brand-mark-logo" aria-hidden="true">
+        <svg class="brand-logo-symbol" viewBox="0 0 64 64">
+          <path class="logo-steam steam-a" d="M24 16c-5-5 5-7 0-13"></path>
+          <path class="logo-steam steam-b" d="M37 16c-5-5 5-7 0-13"></path>
+          <rect class="logo-monitor" x="7" y="18" width="45" height="35" rx="4"></rect>
+          <path class="logo-cup" d="M14 31h29v8c0 8-5 12-14 12S14 47 14 39z"></path>
+          <path class="logo-handle" d="M43 34h4c7 0 7 11 0 11h-4"></path>
+          <path class="logo-base" d="M20 58h24M27 53v5M37 53v5"></path>
+          <path class="logo-code" d="m11 25-4 3 4 3"></path>
+        </svg>
+      </span>
+      <span class="brand-copy"><strong>Dr. Muhammad Gaweesh</strong><small>Full‑Stack Developer</small></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="header-cta magnetic" href="mailto:gawesh1112@gmail.com">
+      <span class="status-dot"></span> Available for a challenge
+    </a>
+
+    <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#work">01 / Work</a>
+    <a href="#expertise">02 / Expertise</a>
+    <a href="#about">03 / About</a>
+    <a href="#contact">04 / Contact</a>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+
+      <div class="hero-main">
+        <div class="eyebrow hero-reveal">
+          <span class="eyebrow-line"></span>
+          Cairo, Egypt <span class="eyebrow-separator">/</span> Building worldwide
+        </div>
+
+        <h1 class="hero-title" aria-label="I build software that stays useful">
+          <span class="title-line"><span>I build software</span></span>
+          <span class="title-line accent-line"><span>that stays useful.</span></span>
+        </h1>
+
+        <div class="hero-bottom hero-reveal">
+          <p class="hero-intro">
+            A doctor and full-stack developer building thoughtful digital products—from clear interfaces and reliable APIs to useful services, data, and deployment.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="button button-primary magnetic">
+              Explore selected work
+              <span class="button-arrow">↘</span>
+            </a>
+            <a href="mailto:gawesh1112@gmail.com" class="text-link magnetic">Start a conversation <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-stage hero-reveal">
+        <canvas id="hero3DCanvas" aria-hidden="true"></canvas>
+        <div class="stage-orbit orbit-a"></div>
+        <div class="stage-orbit orbit-b"></div>
+        <div class="stage-coordinate coordinate-a">X / 42.019</div>
+        <div class="stage-coordinate coordinate-b">Y / 30.044</div>
+        <div class="system-panel" data-tilt>
+        <div class="panel-bar">
+          <div class="window-dots"><i></i><i></i><i></i></div>
+          <span>digital.product</span>
+          <span class="panel-live">LIVE</span>
+        </div>
+        <div class="panel-content">
+          <div class="terminal-line"><span>01</span><code>const builder = new FullStack({</code></div>
+          <div class="terminal-line"><span>02</span><code>&nbsp;&nbsp;scope: <b>“end-to-end”</b>,</code></div>
+          <div class="terminal-line"><span>03</span><code>&nbsp;&nbsp;focus: <b>“business impact”</b>,</code></div>
+          <div class="terminal-line"><span>04</span><code>&nbsp;&nbsp;standard: <b>“clear &amp; reliable”</b></code></div>
+          <div class="terminal-line"><span>05</span><code>});</code></div>
+          <div class="terminal-line active-line"><span>06</span><code>builder.ship();<i class="code-caret"></i></code></div>
+
+          <div class="architecture-stack">
+            <div class="stack-row">
+              <span>EXPERIENCE</span>
+              <div><b>React</b><b>Next.js</b><b>Motion</b></div>
+              <i>01</i>
+            </div>
+            <div class="stack-row">
+              <span>SERVICES</span>
+              <div><b>Node.js</b><b>REST</b><b>WebSocket</b></div>
+              <i>02</i>
+            </div>
+            <div class="stack-row">
+              <span>DATA</span>
+              <div><b>SQL</b><b>MongoDB</b><b>Redis</b></div>
+              <i>03</i>
+            </div>
+            <div class="stack-row">
+              <span>DELIVERY</span>
+              <div><b>Docker</b><b>CI/CD</b><b>Cloud</b></div>
+              <i>04</i>
+            </div>
+          </div>
+
+          <div class="build-status">
+            <span>BUILD STATUS</span>
+            <strong><i></i> ALL SYSTEMS OPERATIONAL</strong>
+          </div>
+        </div>
+        </div>
+        <div class="scene-caption">
+          <span><i></i> INTERACTIVE 3D SYSTEM</span>
+          <b>Move cursor / scroll page</b>
+        </div>
+        <button class="tea-signature" type="button" aria-label="Animate the Dr Gaweesh tea signature" data-tilt>
+          <span class="tea-mark" aria-hidden="true">
+            <svg class="tea-symbol" viewBox="0 0 64 64">
+              <path class="logo-steam steam-a" d="M24 16c-5-5 5-7 0-13"></path>
+              <path class="logo-steam steam-b" d="M37 16c-5-5 5-7 0-13"></path>
+              <rect class="logo-monitor" x="7" y="18" width="45" height="35" rx="4"></rect>
+              <path class="logo-cup" d="M14 31h29v8c0 8-5 12-14 12S14 47 14 39z"></path>
+              <path class="logo-handle" d="M43 34h4c7 0 7 11 0 11h-4"></path>
+              <path class="logo-base" d="M20 58h24M27 53v5M37 53v5"></path>
+              <path class="logo-code" d="m11 25-4 3 4 3"></path>
+            </svg>
+          </span>
+          <span class="tea-signature-copy">
+            <small>DR GAWEESH / SIGNATURE 01</small>
+            <strong>CODE IS BREWING</strong>
+          </span>
+          <span class="tea-live-dot" aria-hidden="true"></span>
+        </button>
+      </aside>
+
+      <div class="hero-metrics hero-reveal">
+        <div><strong data-count="8">0</strong><span>Products shipped</span></div>
+        <div><strong data-count="3">0</strong><span>SaaS platforms</span></div>
+        <div><strong data-count="4">0</strong><span>Business domains</span></div>
+        <div><strong>∞</strong><span>Curious by default</span></div>
+      </div>
+
+      <a href="#work" class="scroll-cue" aria-label="Scroll to selected work">
+        <span>SCROLL TO EXPLORE</span><i></i>
+      </a>
+    </section>
+
+    <div class="tech-marquee" aria-label="Technology expertise">
+      <div class="marquee-track">
+        <span>PRODUCT DEVELOPMENT</span><i>✦</i><span>SAAS PRODUCTS</span><i>✦</i><span>REACT / NEXT.JS</span><i>✦</i><span>NODE.JS</span><i>✦</i><span>AI INTEGRATION</span><i>✦</i><span>DEVOPS</span><i>✦</i>
+        <span>PRODUCT DEVELOPMENT</span><i>✦</i><span>SAAS PRODUCTS</span><i>✦</i><span>REACT / NEXT.JS</span><i>✦</i><span>NODE.JS</span><i>✦</i><span>AI INTEGRATION</span><i>✦</i><span>DEVOPS</span><i>✦</i>
+      </div>
+    </div>
+
+    <section class="manifesto-scene" id="manifesto" aria-labelledby="manifestoTitle">
+      <div class="manifesto-sticky">
+        <div class="manifesto-grid" aria-hidden="true"></div>
+        <div class="manifesto-topline">
+          <span>A SIMPLE WAY OF WORKING</span>
+          <b>00 / 03</b>
+        </div>
+        <div class="manifesto-copy">
+          <p class="section-kicker">UNDERSTAND THE PROBLEM</p>
+          <h2 id="manifestoTitle">
+            <span class="manifesto-word" data-manifesto-word="0">UNDERSTAND.</span>
+            <span class="manifesto-word outline-word" data-manifesto-word="1">BUILD.</span>
+            <span class="manifesto-word accent-word" data-manifesto-word="2">IMPROVE.</span>
+          </h2>
+          <p class="manifesto-description">Good work starts with understanding the real problem, choosing a simple path, and improving the product after launch.</p>
+        </div>
+        <div class="manifesto-visual" aria-hidden="true">
+          <div class="manifesto-cube">
+            <div class="cube-face cube-front"><span>01</span><strong>SYSTEM DESIGN</strong></div>
+            <div class="cube-face cube-back"><span>02</span><strong>PRODUCT LOGIC</strong></div>
+            <div class="cube-face cube-right"><span>03</span><strong>DATA</strong></div>
+            <div class="cube-face cube-left"><span>04</span><strong>SECURITY</strong></div>
+            <div class="cube-face cube-top"><span>05</span><strong>DELIVERY</strong></div>
+            <div class="cube-face cube-bottom"><span>06</span><strong>SCALE</strong></div>
+          </div>
+          <div class="cube-shadow"></div>
+          <div class="physics-orbit physics-orbit-one"><i></i></div>
+          <div class="physics-orbit physics-orbit-two"><i></i></div>
+        </div>
+        <div class="manifesto-telemetry">
+          <span><i></i> PHYSICS ENGINE ACTIVE</span>
+          <span>SCROLL VELOCITY <b data-velocity-readout>+0.00</b></span>
+          <span>FRAME SYNC <b>60HZ</b></span>
+        </div>
+        <div class="manifesto-progress"><i></i></div>
+      </div>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker">01 / SELECTED WORK</p>
+          <h2>Systems, not just<br><em>screens.</em></h2>
+        </div>
+        <p>Products built around real workflows, useful outcomes, and what people actually need after launch.</p>
+      </div>
+
+      <div class="projects">
+        <article class="project project-featured reveal" data-project-color="#6cf5c2">
+          <a class="project-visual" href="https://medcorex.org" target="_blank" rel="noopener">
+            <div class="browser-frame">
+              <div class="browser-top"><i></i><i></i><i></i><span>medcorex.org</span></div>
+              <img src="https://s0.wp.com/mshots/v1/https://medcorex.org?w=1200" alt="MedCoreX clinical platform preview" loading="lazy">
+            </div>
+            <span class="project-index">01</span>
+            <span class="view-project">VIEW LIVE ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-meta"><span>Healthcare SaaS</span><span>Full Stack + Healthcare</span></div>
+            <h3>MedCoreX</h3>
+            <p>A clinical decision-support platform for pharmacists and medical teams—combining therapy monitoring, dosage calculation, antimicrobial stewardship, and AI-driven alerts.</p>
+            <ul class="impact-list">
+              <li><span>Challenge</span>Complex, safety-critical clinical workflows</li>
+              <li><span>Solution</span>Role-aware SaaS with automated decision support</li>
+              <li><span>Stack</span>React · Node.js · MongoDB · AI · Docker</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project reveal" data-project-color="#a8c7ff">
+          <a class="project-visual" href="https://sci-bridge.org" target="_blank" rel="noopener">
+            <div class="browser-frame">
+              <div class="browser-top"><i></i><i></i><i></i><span>sci-bridge.org</span></div>
+              <img src="https://s0.wp.com/mshots/v1/https://sci-bridge.org?w=1200" alt="Sci Bridge learning platform preview" loading="lazy">
+            </div>
+            <span class="project-index">02</span>
+            <span class="view-project">VIEW LIVE ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-meta"><span>EdTech SaaS</span><span>Product Development</span></div>
+            <h3>Sci Bridge</h3>
+            <p>An end-to-end scientific learning ecosystem with on-demand courses, interactive cases, live sessions, payments, email automation, and certificate generation.</p>
+            <ul class="impact-list">
+              <li><span>Scope</span>Learning, commerce, and operations in one system</li>
+              <li><span>Integrations</span>Jitsi · Kashier · Brevo · PDF automation</li>
+              <li><span>Focus</span>Reliable delivery and frictionless learning</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project reveal" data-project-color="#f5bf6c">
+          <a class="project-visual local-visual" href="https://obelisk-solutions.com/" target="_blank" rel="noopener">
+            <div class="browser-frame">
+              <div class="browser-top"><i></i><i></i><i></i><span>obelisk-solutions.com</span></div>
+              <img src="Ob.png" alt="Obelisk Solutions website preview" loading="lazy">
+            </div>
+            <span class="project-index">03</span>
+            <span class="view-project">VIEW LIVE ↗</span>
+          </a>
+          <div class="project-info">
+            <div class="project-meta"><span>Global Consulting</span><span>Digital Experience</span></div>
+            <h3>Obelisk Solutions</h3>
+            <p>A focused corporate experience for an international consulting firm, designed to communicate complex services clearly and turn qualified traffic into conversations.</p>
+            <ul class="impact-list">
+              <li><span>Challenge</span>Communicate a broad global service portfolio</li>
+              <li><span>Solution</span>Clear information architecture and conversion paths</li>
+              <li><span>Focus</span>Brand authority · Multilingual · Lead generation</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
+      <div class="more-work reveal">
+        <div class="more-work-head">
+          <p>MORE SHIPPED PRODUCTS</p>
+          <span>Different markets. The same care for useful details.</span>
+        </div>
+        <div class="project-table legacy-project-table">
+          <a href="https://mamlakty.com/" target="_blank" rel="noopener"><span>04</span><strong>Mamlakty</strong><em>E-commerce / SEO / Performance</em><b>↗</b></a>
+          <a href="https://profamalkamal.com/" target="_blank" rel="noopener"><span>05</span><strong>Prof. Amal Kamal</strong><em>Academic Platform / Content System</em><b>↗</b></a>
+          <a href="https://bta3al3ab.online/" target="_blank" rel="noopener"><span>06</span><strong>Techno Core</strong><em>Gaming Discovery / PHP / MySQL</em><b>↗</b></a>
+          <a href="https://ahmedos.pages.dev/" target="_blank" rel="noopener"><span>07</span><strong>Dr. Ahmed Osama</strong><em>Personal Brand / Web Experience</em><b>↗</b></a>
+          <a href="https://drmyahia.pages.dev/" target="_blank" rel="noopener"><span>08</span><strong>Dr. Mohamed Yahia</strong><em>Medical Portfolio / Booking</em><b>↗</b></a>
+        </div>
+        <div class="project-vault">
+          <a class="vault-card reveal-child" href="https://mamlakty.com/" target="_blank" rel="noopener" data-depth-card>
+            <div class="vault-media"><img src="ma.jpg" alt="Mamlakty e-commerce platform" loading="lazy"><span>04 / COMMERCE</span><i>VIEW LIVE &nearr;</i></div>
+            <div class="vault-content">
+              <small>E-COMMERCE SYSTEM</small><h3>Mamlakty</h3>
+              <p>A mobile-first shopping experience for mothers and children, built around discoverability, fast product journeys, and simple store operations.</p>
+              <div><b>WooCommerce</b><b>Payments</b><b>SEO</b><b>Performance</b></div>
+            </div>
+          </a>
+          <a class="vault-card reveal-child" href="https://profamalkamal.com/" target="_blank" rel="noopener" data-depth-card>
+            <div class="vault-media"><img src="prof.png" alt="Prof. Amal Kamal academic platform" loading="lazy"><span>05 / ACADEMIC</span><i>VIEW LIVE &nearr;</i></div>
+            <div class="vault-content">
+              <small>KNOWLEDGE PLATFORM</small><h3>Prof. Amal Kamal</h3>
+              <p>A bilingual academic hub that turns research, lectures, training opportunities, and professional news into a clear publishing system.</p>
+              <div><b>CMS</b><b>Arabic RTL</b><b>Content IA</b><b>SEO</b></div>
+            </div>
+          </a>
+          <a class="vault-card reveal-child techno-core-card" href="https://bta3al3ab.online/" target="_blank" rel="noopener" data-depth-card>
+            <div class="vault-media"><img src="techno-core.png" alt="Techno Core gaming discovery platform" loading="lazy"><span>06 / GAMING ENGINE</span><i>VIEW LIVE &nearr;</i></div>
+            <div class="vault-content">
+              <small>GAMING DISCOVERY PLATFORM</small><h3>Techno Core</h3>
+              <p>A cinematic Arabic gaming hub for discovering games, movies, system requirements, communities, and curated entertainment content.</p>
+              <div><b>JavaScript</b><b>PHP</b><b>MySQL</b><b>Arabic UX</b></div>
+            </div>
+          </a>
+          <a class="vault-card reveal-child" href="https://ahmedos.pages.dev/" target="_blank" rel="noopener" data-depth-card>
+            <div class="vault-media"><img src="ah.jpg" alt="Dr. Ahmed Osama portfolio" loading="lazy"><span>07 / PORTFOLIO</span><i>VIEW LIVE &nearr;</i></div>
+            <div class="vault-content">
+              <small>PERSONAL BRAND SYSTEM</small><h3>Dr. Ahmed Osama</h3>
+              <p>A fast professional presence designed to communicate expertise instantly and create a direct path for recruiters and collaborators.</p>
+              <div><b>UX Strategy</b><b>Frontend</b><b>Performance</b><b>Cloudflare</b></div>
+            </div>
+          </a>
+          <a class="vault-card reveal-child" href="https://drmyahia.pages.dev/" target="_blank" rel="noopener" data-depth-card>
+            <div class="vault-media"><img src="mo.jpg" alt="Dr. Mohamed Yahia medical website" loading="lazy"><span>08 / MEDICAL</span><i>VIEW LIVE &nearr;</i></div>
+            <div class="vault-content">
+              <small>MEDICAL WEB EXPERIENCE</small><h3>Dr. Mohamed Yahia</h3>
+              <p>A trusted medical presence combining professional information, patient resources, and conversion-focused contact and booking paths.</p>
+              <div><b>Medical UX</b><b>Booking</b><b>Responsive</b><b>Edge Deploy</b></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section expertise-section" id="expertise">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker">02 / HOW I BUILD</p>
+          <h2>From an idea<br>to <em>something useful.</em></h2>
+        </div>
+        <p>Good software is not about knowing every library. It is about understanding the problem, choosing the right tools, and keeping things clear.</p>
+      </div>
+
+      <div class="architecture-lab reveal">
+        <div class="lab-copy">
+          <p class="section-kicker">HOW THE PARTS CONNECT</p>
+          <h3>A system<br>you can <em>see.</em></h3>
+          <p>Every product is a connected system. Scroll and move your cursor to inspect the layers I own from interface to infrastructure.</p>
+          <div class="lab-status"><span><i></i> MODEL ONLINE</span><b>4 LAYERS / 16 CAPABILITIES</b></div>
+        </div>
+        <div class="stack-3d" id="architecture3D" aria-label="Interactive four-layer software system model">
+          <div class="stack-platform platform-ui"><span>01</span><strong>EXPERIENCE</strong><small>React / Next.js / Motion / Accessibility</small><i></i></div>
+          <div class="stack-platform platform-api"><span>02</span><strong>APPLICATION</strong><small>Node.js / REST / Realtime / Workflows</small><i></i></div>
+          <div class="stack-platform platform-data"><span>03</span><strong>INTELLIGENCE</strong><small>SQL / MongoDB / Cache / AI</small><i></i></div>
+          <div class="stack-platform platform-cloud"><span>04</span><strong>INFRASTRUCTURE</strong><small>Docker / CI-CD / Cloud / Observability</small><i></i></div>
+          <div class="stack-core"><b>MG</b><span>SYSTEM<br>CORE</span></div>
+          <div class="stack-beam"></div>
+          <div class="stack-flow"><i></i><i></i><i></i><i></i></div>
+          <div class="stack-orbit"><i></i><i></i><i></i></div>
+          <div class="stack-telemetry"><span>LATENCY / 42MS</span><span>UPTIME / 99.9%</span><span>EVENTS / LIVE</span></div>
+        </div>
+      </div>
+
+      <div class="capability-grid">
+        <article class="capability reveal" data-tilt>
+          <span class="cap-number">01</span>
+          <div class="cap-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 13h32M8 24h32M8 35h19"/><circle cx="34" cy="35" r="6"/></svg></div>
+          <h3>Product Foundation</h3>
+          <p>Translate business constraints into maintainable boundaries, pragmatic technical choices, and a roadmap that keeps teams moving.</p>
+          <div class="cap-tags"><span>System Design</span><span>SaaS</span><span>Multi-tenant</span><span>RBAC</span></div>
+        </article>
+
+        <article class="capability reveal" data-tilt>
+          <span class="cap-number">02</span>
+          <div class="cap-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="8" width="36" height="28" rx="3"/><path d="m15 20 6 5-6 5m10 0h9M18 40h12"/></svg></div>
+          <h3>Full Product Build</h3>
+          <p>Build coherent experiences across frontend, backend, data, and infrastructure—with quality owned across every layer.</p>
+          <div class="cap-tags"><span>React</span><span>Next.js</span><span>Node.js</span><span>TypeScript</span></div>
+        </article>
+
+        <article class="capability reveal" data-tilt>
+          <span class="cap-number">03</span>
+          <div class="cap-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5 40 14v20L24 43 8 34V14z"/><path d="m8 14 16 10 16-10M24 24v19"/></svg></div>
+          <h3>Backend &amp; Data</h3>
+          <p>Design APIs, data models, queues, caching, and real-time flows that remain observable and predictable as usage grows.</p>
+          <div class="cap-tags"><span>REST</span><span>WebSocket</span><span>SQL</span><span>MongoDB</span></div>
+        </article>
+
+        <article class="capability reveal" data-tilt>
+          <span class="cap-number">04</span>
+          <div class="cap-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 30a9 9 0 0 1 3-17 13 13 0 0 1 24 5 7 7 0 0 1 0 14H14"/><path d="m18 31 5 5 9-12"/></svg></div>
+          <h3>Reliable Delivery</h3>
+          <p>Ship with security, automated delivery, monitoring, graceful failures, and a setup that stays understandable.</p>
+          <div class="cap-tags"><span>Docker</span><span>CI/CD</span><span>Cloud</span><span>Observability</span></div>
+        </article>
+      </div>
+
+      <div class="build-loop reveal">
+        <div class="loop-copy">
+          <p class="section-kicker">A SIMPLE PROCESS</p>
+          <h3>A simple build loop.</h3>
+          <p>Each step keeps the work focused, practical, and easier to improve.</p>
+        </div>
+        <div class="loop-steps">
+          <div class="loop-step active"><span>01</span><strong>DISCOVER</strong><small>Understand the real constraint</small></div>
+          <div class="loop-step"><span>02</span><strong>PLAN</strong><small>Choose a clear path</small></div>
+          <div class="loop-step"><span>03</span><strong>BUILD</strong><small>Ship in useful increments</small></div>
+          <div class="loop-step"><span>04</span><strong>TEST</strong><small>Check what could go wrong</small></div>
+          <div class="loop-step"><span>05</span><strong>IMPROVE</strong><small>Listen, learn, refine</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-layout">
+        <div class="portrait-wrap profile-stage reveal">
+          <div class="profile-orbit orbit-profile-a"></div>
+          <div class="profile-orbit orbit-profile-b"></div>
+          <div class="portrait-frame" data-tilt>
+            <img src="image.jpg" alt="Muhammad Gaweesh" loading="lazy">
+            <div class="portrait-grid"></div>
+            <div class="face-lock"><i></i><i></i><i></i><i></i></div>
+            <div class="portrait-scan"></div>
+          </div>
+          <div class="profile-chip profile-chip-one"><span>ROLE</span><strong>DOCTOR + DEVELOPER</strong></div>
+          <div class="profile-chip profile-chip-two"><span>BASE</span><strong>CAIRO / WORLDWIDE</strong></div>
+          <div class="profile-chip profile-chip-three"><i></i><strong>AVAILABLE</strong></div>
+          <div class="portrait-label"><span>PROFILE / 001</span><strong>MUHAMMAD GAWEESH</strong></div>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="section-kicker">03 / ABOUT ME</p>
+          <h2>I care about what happens <em>after</em> the demo.</h2>
+          <p class="about-lead">I’m Muhammad—a doctor and full-stack developer based in Egypt. I enjoy turning useful ideas into clear digital products, especially when the work needs both curiosity and practical thinking.</p>
+          <p>I work across healthcare technology, education, commerce, and service businesses. That range taught me to enter unfamiliar domains quickly, ask sharper questions, and design software around people—not around a trendy stack.</p>
+
+          <div class="principles">
+            <div><span>01</span><strong>Clarity over cleverness</strong><p>The next person should understand the system without a treasure map.</p></div>
+            <div><span>02</span><strong>Ship, observe, improve</strong><p>Feedback after launch is part of the work—not the end of it.</p></div>
+            <div><span>03</span><strong>Own the outcome</strong><p>A feature isn’t done until it creates the intended value reliably.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-strip reveal">
+        <div class="quote-mark">“</div>
+        <blockquote>
+          <p id="quoteText">Muhammad understood our requirements and delivered exactly what we needed. The site represents our brand well and has helped us attract new clients.</p>
+          <footer><strong id="quoteAuthor">Obelisk Solutions</strong><span id="quoteRole">International Consulting Firm</span></footer>
+        </blockquote>
+        <div class="quote-controls">
+          <button id="quotePrev" aria-label="Previous testimonial">←</button>
+          <span><b id="quoteIndex">01</b> / 03</span>
+          <button id="quoteNext" aria-label="Next testimonial">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section contact-control" id="contact">
+      <div class="contact-grid" aria-hidden="true"></div>
+      <div class="contact-reactor" aria-hidden="true">
+        <div class="reactor-ring reactor-ring-a"><i></i></div>
+        <div class="reactor-ring reactor-ring-b"><i></i></div>
+        <div class="reactor-ring reactor-ring-c"><i></i></div>
+        <div class="reactor-core"><span>OPEN</span><b>TO BUILD</b></div>
+      </div>
+      <div class="contact-orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="contact-inner reveal">
+        <p class="section-kicker">04 / LET’S TALK</p>
+        <h2>Have something useful<br>to <em>build?</em></h2>
+        <p>Tell me what you are working on. I&rsquo;ll help turn it into a clear, practical next step.</p>
+        <div class="project-types" aria-label="Project specialities">
+          <span>SaaS platforms</span><span>Healthcare tech</span><span>AI integration</span><span>System rescue</span>
+        </div>
+        <a class="contact-button magnetic" href="mailto:gawesh1112@gmail.com">
+          <span>START A CONVERSATION</span><i>&nearr;</i>
+        </a>
+        <div class="contact-details">
+          <a href="mailto:gawesh1112@gmail.com">gawesh1112@gmail.com</a>
+          <span>Cairo, Egypt &middot; Remote worldwide</span>
+        </div>
+      </div>
+      <div class="contact-console reveal" data-tilt>
+        <div class="console-bar"><div class="window-dots"><i></i><i></i><i></i></div><span>project.intake</span><b>SECURE</b></div>
+        <div class="console-body">
+          <div class="console-status"><span><i></i> ACCEPTING SELECT PROJECTS</span><b>Q3 / 2026</b></div>
+          <p>Tell me where the product is today and where it needs to go. I&rsquo;ll respond with the clearest next step.</p>
+          <div class="console-rows">
+            <div><span>01</span><strong>Planning &amp; technical direction</strong><i>READY</i></div>
+            <div><span>02</span><strong>Full product development</strong><i>READY</i></div>
+            <div><span>03</span><strong>Performance &amp; system improvement</strong><i>READY</i></div>
+          </div>
+          <a href="mailto:gawesh1112@gmail.com?subject=New%20project%20brief" class="console-action"><span>OPEN PROJECT CHANNEL</span><i>&rarr;</i></a>
+          <div class="console-foot"><span>RESPONSE TARGET / 24H</span><span>TIMEZONE / UTC+2</span></div>
+        </div>
+      </div>
+      <div class="contact-ticker" aria-hidden="true">
+        <div><span>SYSTEM DESIGN</span><i>&#10022;</i><span>PRODUCT DEVELOPMENT</span><i>&#10022;</i><span>AI SYSTEMS</span><i>&#10022;</i><span>SAAS</span><i>&#10022;</i><span>DEVOPS</span><i>&#10022;</i><span>SYSTEM DESIGN</span><i>&#10022;</i><span>PRODUCT DEVELOPMENT</span><i>&#10022;</i><span>AI SYSTEMS</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-logo-lockup" href="#home" aria-label="Dr Gaweesh — back to home">
+      <span class="footer-logo-crop">
+        <svg class="footer-wordmark-svg" viewBox="0 0 430 118" role="img" aria-label="Dr. Muhammad Gaweesh — Full-Stack Developer">
+          <g class="footer-symbol" transform="translate(12 14) scale(1.35)">
+            <path class="logo-steam steam-a" d="M24 16c-5-5 5-7 0-13"></path>
+            <path class="logo-steam steam-b" d="M37 16c-5-5 5-7 0-13"></path>
+            <rect class="logo-monitor" x="7" y="18" width="45" height="35" rx="4"></rect>
+            <path class="logo-cup" d="M14 31h29v8c0 8-5 12-14 12S14 47 14 39z"></path>
+            <path class="logo-handle" d="M43 34h4c7 0 7 11 0 11h-4"></path>
+            <path class="logo-base" d="M20 58h24M27 53v5M37 53v5"></path>
+          </g>
+          <text class="footer-code-tag" x="110" y="35">&lt;/&gt;</text>
+          <text class="footer-logo-name" x="110" y="70">DR. MUHAMMAD GAWEESH</text>
+          <text class="footer-logo-role" x="112" y="93">FULL-STACK DEVELOPER / CAIRO</text>
+          <path class="footer-logo-trace" d="M112 104h245l18-10h38"></path>
+          <circle class="footer-logo-node" cx="413" cy="94" r="3"></circle>
+        </svg>
+      </span>
+    </a>
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">MG</span><span class="brand-copy"><strong>Dr. Muhammad Gaweesh</strong><small>Full‑Stack Developer</small></span></a>
+    <p class="footer-statement">Useful digital products<br>built with care and curiosity.</p>
+    <div class="footer-links">
+      <a href="https://github.com/MGaweesh" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://linkedin.com/in/muhammad-gaweesh-780396174/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://fb.com/mohamedgaweshking" target="_blank" rel="noopener">Facebook ↗</a>
+    </div>
+    <div class="footer-system">
+      <span><i></i> ALL SYSTEMS OPERATIONAL</span>
+      <b>CAIRO / <time id="cairoTime">00:00:00</time></b>
+    </div>
+    <a class="back-to-top magnetic" href="#home"><span>BACK TO TOP</span><i>&uarr;</i></a>
+    <p class="footer-copyright">© <span id="year"></span> Muhammad Gaweesh. Built with care.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

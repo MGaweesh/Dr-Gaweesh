@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 200" width="1360" height="400">
+  <rect width="680" height="200" fill="#f4f1e9"/>
+
+  <g transform="translate(18,22) scale(2.05)">
+    <g fill="none" stroke="#17140f" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="#c34f22" opacity=".85" d="M24 16c-5-5 5-7 0-13"/>
+      <path stroke="#c34f22" opacity=".85" d="M37 16c-5-5 5-7 0-13"/>
+      <rect x="7" y="18" width="45" height="35" rx="4"/>
+      <path fill="rgba(195,79,34,.16)" stroke="#c34f22" d="M14 31h29v8c0 8-5 12-14 12S14 47 14 39z"/>
+      <path stroke="#c34f22" d="M43 34h4c7 0 7 11 0 11h-4"/>
+      <path d="M20 58h24M27 53v5M37 53v5"/>
+      <path d="m11 25-4 3 4 3"/>
+    </g>
+  </g>
+
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#17140f">
+    <text x="182" y="98" font-size="46" font-weight="400">
+      <tspan fill="#c34f22" font-family="'Segoe UI', Arial, sans-serif" font-weight="700">&lt;/</tspan>
+      <tspan dx="8">Dr</tspan>
+    </text>
+    <text x="182" y="158" font-size="56" font-weight="700">
+      Gaweesh<tspan fill="#1f5347" font-family="'Segoe UI', Arial, sans-serif" font-weight="700" dx="6">/&gt;</tspan>
+    </text>
+  </g>
+
+  <text x="182" y="184" font-family="'Segoe UI', Arial, sans-serif" font-size="17" letter-spacing="2" fill="#746c5f">PHARMACIST &#183; SOFTWARE &amp; WEB APPS</text>
+</svg>

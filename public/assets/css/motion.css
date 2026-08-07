@@ -1,0 +1,129 @@
+/* ═══════════════════════════════════════════════════════════════════
+   MOTION — reveal states, scroll-driven variables, reduced motion
+   Every transition below is driven by a class the scroll engine adds.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── masked line reveal (headlines) ─────────────────────────────── */
+[data-mask] {
+  display: block;
+  overflow: hidden;
+  padding-bottom: .06em;
+}
+[data-mask] > span {
+  display: block;
+  transform: translateY(108%) rotate(3deg);
+  transform-origin: left top;
+  transition:
+    transform 1.15s var(--ease),
+    opacity .9s var(--ease);
+  opacity: 0;
+}
+[data-mask].in > span { transform: none; opacity: 1; }
+[data-mask]:nth-child(2) > span { transition-delay: .09s; }
+[data-mask]:nth-child(3) > span { transition-delay: .18s; }
+
+/* ── soft lift (paragraphs, buttons, list items) ────────────────── */
+[data-lift] {
+  opacity: 0;
+  transform: translateY(26px);
+  filter: blur(6px);
+  transition:
+    opacity .95s var(--ease),
+    transform 1.05s var(--ease),
+    filter .95s var(--ease);
+}
+[data-lift].in { opacity: 1; transform: none; filter: none; }
+
+/* staggered children inside a revealed block */
+[data-reveal] > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .9s var(--ease), transform 1s var(--ease);
+}
+[data-reveal].in > *          { opacity: 1; transform: none; }
+[data-reveal].in > *:nth-child(1) { transition-delay: .04s; }
+[data-reveal].in > *:nth-child(2) { transition-delay: .12s; }
+[data-reveal].in > *:nth-child(3) { transition-delay: .2s; }
+[data-reveal].in > *:nth-child(4) { transition-delay: .28s; }
+[data-reveal].in > *:nth-child(5) { transition-delay: .36s; }
+[data-reveal].in > *:nth-child(6) { transition-delay: .44s; }
+[data-reveal].in > *:nth-child(7) { transition-delay: .52s; }
+
+/* ── hand-drawn underline draws itself ──────────────────────────── */
+.pen.in path {
+  animation: pen-draw 1.05s var(--ease) forwards;
+}
+.pen.in .pen-2 { animation-delay: .2s; animation-duration: .95s; }
+@keyframes pen-draw { to { stroke-dashoffset: 0; } }
+
+/* ── kicker rule grows in ───────────────────────────────────────── */
+.kicker i { transform: scaleX(0); transition: transform .8s var(--ease) .15s; }
+[data-reveal].in .kicker i,
+.in > .kicker i,
+.kicker.in i { transform: scaleX(1); }
+
+/* ── tally counters ─────────────────────────────────────────────── */
+.tally li:nth-child(1) { transition-delay: .02s; }
+.tally li:nth-child(2) { transition-delay: .1s; }
+.tally li:nth-child(3) { transition-delay: .18s; }
+.tally li:nth-child(4) { transition-delay: .26s; }
+
+/* ── sticky case scale (driven by --squash from JS) ─────────────── */
+.case {
+  --squash: 0;
+  transform: scale(calc(1 - var(--squash) * .055))
+             translateY(calc(var(--squash) * -8px));
+}
+.case-inner { transition: filter .5s var(--ease-soft); }
+.case[data-buried="1"] .case-inner { filter: brightness(.94) saturate(.9); }
+
+/* ── thread bead travels the path ───────────────────────────────── */
+.thread-bead { transition: transform .35s var(--ease-soft); }
+
+/* ── tilt is driven frame-by-frame in JS, so no transition here ─── */
+[data-tilt] {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ── belt hover pause ───────────────────────────────────────────── */
+.belt:hover .belt-track span { color: var(--ink); }
+.belt-track span { transition: color .5s; }
+
+/* ── page-load choreography ─────────────────────────────────────
+   The scroll engine holds every reveal back until the curtain lifts,
+   so nothing animates behind it and gets missed.
+   ─────────────────────────────────────────────────────────────── */
+body.booting .layers { opacity: 0; }
+.layers { transition: opacity .9s var(--ease) .4s; }
+
+/* ═══ REDUCED MOTION ═════════════════════════════════════════════
+   Everything still appears — it just stops moving.
+   ═══════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-mask] > span,
+  [data-lift],
+  [data-reveal] > * {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .pen path { stroke-dashoffset: 0; }
+  .kicker i { transform: scaleX(1); }
+  .case { position: static; transform: none; }
+  .archive { height: auto; }
+  .archive-pin { position: static; height: auto; }
+  .rail { flex-wrap: wrap; width: auto; transform: none !important; }
+  .card { width: min(430px, 100%); }
+  .approach { height: auto; padding-block: var(--bay); }
+  .approach-pin { position: static; height: auto; }
+  .steps li { opacity: 1; filter: none; transform: none; }
+  .cursor { display: none; }
+  .grain { animation: none; }
+}

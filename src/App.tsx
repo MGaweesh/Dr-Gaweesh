@@ -188,7 +188,7 @@ export default function App() {
                 <div className="case-visual" data-cursor="visit">
                   <a href="https://medcorex.org" target="_blank" rel="noopener" data-tilt>
                     <span className="frame">
-                      <img src="/medcorex.webp" alt="MedCoreX clinical platform" loading="lazy" data-parallax />
+                      <img src="/medcorex.webp" srcSet="/medcorex-700.webp 700w, /medcorex.webp 1100w" sizes="(min-width: 1180px) 45vw, 92vw" alt="MedCoreX clinical platform" loading="lazy" data-parallax />
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
@@ -217,7 +217,7 @@ export default function App() {
                 <div className="case-visual" data-cursor="visit">
                   <a href="https://sci-bridge.org" target="_blank" rel="noopener" data-tilt>
                     <span className="frame">
-                      <img src="/sci-bridge.webp" alt="Sci Bridge learning platform" loading="lazy" data-parallax />
+                      <img src="/sci-bridge.webp" srcSet="/sci-bridge-700.webp 700w, /sci-bridge.webp 1100w" sizes="(min-width: 1180px) 45vw, 92vw" alt="Sci Bridge learning platform" loading="lazy" data-parallax />
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
@@ -246,7 +246,7 @@ export default function App() {
                 <div className="case-visual" data-cursor="visit">
                   <a href="https://tahfizquran.org/" target="_blank" rel="noopener" data-tilt>
                     <span className="frame">
-                      <img src="/tahfiz.webp" alt="Tahfiz Quran Academy platform" loading="lazy" data-parallax />
+                      <img src="/tahfiz.webp" srcSet="/tahfiz-700.webp 700w, /tahfiz.webp 1100w" sizes="(min-width: 1180px) 45vw, 92vw" alt="Tahfiz Quran Academy platform" loading="lazy" data-parallax />
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
@@ -275,7 +275,7 @@ export default function App() {
                 <div className="case-visual" data-cursor="visit">
                   <a href="https://bta3al3ab.online/" target="_blank" rel="noopener" data-tilt>
                     <span className="frame">
-                      <img src="/techno-core.webp" alt="Techno Core Arabic gaming platform" loading="lazy" data-parallax />
+                      <img src="/techno-core.webp" srcSet="/techno-core-700.webp 700w, /techno-core.webp 1100w" sizes="(min-width: 1180px) 45vw, 92vw" alt="Techno Core Arabic gaming platform" loading="lazy" data-parallax />
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>

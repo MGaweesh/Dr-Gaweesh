@@ -339,10 +339,18 @@ em { font-style: normal; }
 }
 .header-mail:hover { border-color: var(--accent); color: var(--ink); background: var(--accent-wash); }
 .header-mail-dot {
+  position: relative;
   width: 7px; height: 7px;
   border-radius: 50%;
   background: var(--accent-2);
-  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-2) 55%, transparent);
+}
+.header-mail-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--accent-2);
+  opacity: .55;
   animation: ping 2.6s ease-out infinite;
 }
 
@@ -629,15 +637,24 @@ main { position: relative; z-index: 2; }
   color: var(--ink-3);
 }
 .place-dot {
+  position: relative;
   width: 7px; height: 7px;
   border-radius: 50%;
   background: var(--accent-2);
-  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-2) 55%, transparent);
+}
+.place-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--accent-2);
+  opacity: .55;
   animation: ping 2.6s ease-out infinite;
 }
+/* a transform+opacity ring instead of an animated box-shadow keeps this
+   composited — box-shadow animations run on the main thread. */
 @keyframes ping {
-  70%  { box-shadow: 0 0 0 9px transparent; }
-  100% { box-shadow: 0 0 0 0 transparent; }
+  70%, 100% { transform: scale(3.6); opacity: 0; }
 }
 .place-sep { color: var(--rule-2); }
 
@@ -1078,12 +1095,14 @@ main { position: relative; z-index: 2; }
   gap: 8px;
   padding: clamp(14px, 1.8vw, 26px) 0;
   border-top: 1px solid var(--rule);
-  opacity: .28;
-  filter: blur(1.5px);
+  /* .62, not a deeper fade, so dimmed steps still clear WCAG AA contrast
+     against --paper. No blur filter — those don't composite, and the
+     opacity + lift already read clearly as "not this one yet". */
+  opacity: .62;
   transform: translateY(14px);
-  transition: opacity .6s var(--ease), filter .6s var(--ease), transform .6s var(--ease);
+  transition: opacity .6s var(--ease), transform .6s var(--ease);
 }
-.steps li.on { opacity: 1; filter: none; transform: none; }
+.steps li.on { opacity: 1; transform: none; }
 .steps h3 {
   font-family: var(--display);
   font-variation-settings: "SOFT" 40, "WONK" 1, "opsz" 144;

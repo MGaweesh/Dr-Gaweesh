@@ -33,7 +33,7 @@ import { Color, BufferGeometry, BufferAttribute, Vector3, Quaternion, ShaderMate
 
   /* ── the lattice every formation is derived from ───────────────── */
   const LAYERS = 4;
-  const SIDE = window.innerWidth < 760 ? 20 : 26;
+  const SIDE = window.innerWidth < 760 ? 16 : 26;
   const SPREAD = 3.1;
   const GAP = 0.62;
   const COUNT = LAYERS * SIDE * SIDE;
@@ -278,7 +278,7 @@ import { Color, BufferGeometry, BufferAttribute, Vector3, Quaternion, ShaderMate
      at this point size. low-power hints the browser off the discrete GPU
      where the OS has one, since this is a decorative background layer. */
   const renderer = new WebGLRenderer({ canvas, alpha: true, antialias: false, powerPreference: "low-power" });
-  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, coarse ? 1.5 : 2));
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, coarse ? 1 : 2));
   renderer.setClearColor(0x000000, 0);
 
   const scene = new Scene();

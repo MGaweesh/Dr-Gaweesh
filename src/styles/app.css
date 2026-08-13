@@ -1095,10 +1095,13 @@ main { position: relative; z-index: 2; }
   gap: 8px;
   padding: clamp(14px, 1.8vw, 26px) 0;
   border-top: 1px solid var(--rule);
-  /* .62, not a deeper fade, so dimmed steps still clear WCAG AA contrast
-     against --paper. No blur filter — those don't composite, and the
-     opacity + lift already read clearly as "not this one yet". */
-  opacity: .62;
+  /* .8, not a deeper fade: the step paragraphs use --ink-2, which needs
+     opacity ~.75+ over --paper to still clear WCAG AA contrast (the
+     lighter --ink heading text alone would've cleared it at a lower
+     value, but both share this one opacity). No blur filter either —
+     that doesn't composite, and the opacity + lift already read clearly
+     as "not this one yet". */
+  opacity: .8;
   transform: translateY(14px);
   transition: opacity .6s var(--ease), transform .6s var(--ease);
 }

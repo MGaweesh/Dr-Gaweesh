@@ -15,7 +15,7 @@
    Two formations are evaluated per vertex and blended, with a per-point
    stagger so the field reforms in a wave rather than snapping.
    ═══════════════════════════════════════════════════════════════════ */
-import { Color, BufferGeometry, BufferAttribute, Vector3, ShaderMaterial, WebGLRenderer, Scene, PerspectiveCamera, Group, Points, Clock } from "three";
+import { Color, BufferGeometry, BufferAttribute, Vector3, Quaternion, ShaderMaterial, WebGLRenderer, Scene, PerspectiveCamera, Group, Points, Clock } from "three";
 
 (() => {
   "use strict";
@@ -271,8 +271,14 @@ import { Color, BufferGeometry, BufferAttribute, Vector3, ShaderMaterial, WebGLR
     transparent: true, depthTest: false, depthWrite: false
   });
 
-  const renderer = new WebGLRenderer({ canvas, alpha: true, antialias: true });
-  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+  /* antialias is redundant here — every point is already self-masked by
+     the frag shader's smoothstep circle, so MSAA only adds GPU cost with
+     no visible gain. Pixel ratio is capped lower on touch devices, which
+     are usually the ones paying for it in battery, not visible softness
+     at this point size. low-power hints the browser off the discrete GPU
+     where the OS has one, since this is a decorative background layer. */
+  const renderer = new WebGLRenderer({ canvas, alpha: true, antialias: false, powerPreference: "low-power" });
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, coarse ? 1.5 : 2));
   renderer.setClearColor(0x000000, 0);
 
   const scene = new Scene();
@@ -377,6 +383,7 @@ import { Color, BufferGeometry, BufferAttribute, Vector3, ShaderMaterial, WebGLR
   let ex = 0, ey = 0, easedOn = 0;
   let stage = 0, rigX = 1.5, rigY = 0.1, rigRX = 0.38, presence = 1;
   const tmp = new Vector3();
+  const tmpQ = new Quaternion();
 
   const frame = () => {
     requestAnimationFrame(frame);
@@ -422,7 +429,7 @@ import { Color, BufferGeometry, BufferAttribute, Vector3, ShaderMaterial, WebGLR
     uniforms.uPointerOn.value = easedOn;
 
     tmp.set(ex * 4.2, ey * 2.6, 0.6).sub(rig.position)
-       .applyQuaternion(rig.quaternion.clone().invert());
+       .applyQuaternion(tmpQ.copy(rig.quaternion).invert());
     uniforms.uPointer.value.copy(tmp);
 
     rig.rotation.y = t * 0.055 + ex * 0.3;

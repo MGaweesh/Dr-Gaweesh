@@ -188,7 +188,7 @@ export default function App() {
                 <div className="case-visual" data-cursor="visit">
                   <a href="https://medcorex.org" target="_blank" rel="noopener" data-tilt>
                     <span className="frame">
-                      <img src="/medcorex.jpg" alt="MedCoreX clinical platform" loading="lazy" data-parallax />
+                      <img src="/medcorex.webp" alt="MedCoreX clinical platform" loading="lazy" data-parallax />
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
@@ -217,7 +217,7 @@ export default function App() {
                 <div className="case-visual" data-cursor="visit">
                   <a href="https://sci-bridge.org" target="_blank" rel="noopener" data-tilt>
                     <span className="frame">
-                      <img src="/sci-bridge.jpg" alt="Sci Bridge learning platform" loading="lazy" data-parallax />
+                      <img src="/sci-bridge.webp" alt="Sci Bridge learning platform" loading="lazy" data-parallax />
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
@@ -246,7 +246,7 @@ export default function App() {
                 <div className="case-visual" data-cursor="visit">
                   <a href="https://tahfizquran.org/" target="_blank" rel="noopener" data-tilt>
                     <span className="frame">
-                      <img src="/tahfiz.jpg" alt="Tahfiz Quran Academy platform" loading="lazy" data-parallax />
+                      <img src="/tahfiz.webp" alt="Tahfiz Quran Academy platform" loading="lazy" data-parallax />
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
@@ -275,7 +275,7 @@ export default function App() {
                 <div className="case-visual" data-cursor="visit">
                   <a href="https://bta3al3ab.online/" target="_blank" rel="noopener" data-tilt>
                     <span className="frame">
-                      <img src="/techno-core.png" alt="Techno Core Arabic gaming platform" loading="lazy" data-parallax />
+                      <img src="/techno-core.webp" alt="Techno Core Arabic gaming platform" loading="lazy" data-parallax />
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
@@ -317,7 +317,7 @@ export default function App() {
 
             <div className="rail" data-rail-track>
               <a className="card" href="https://obelisk-solutions.com/" target="_blank" rel="noopener" data-cursor="visit">
-                <span className="card-media"><img src="/Ob.png" alt="Obelisk Solutions website" loading="lazy" /></span>
+                <span className="card-media"><img src="/Ob.webp" alt="Obelisk Solutions website" loading="lazy" /></span>
                 <span className="card-body">
                   <em>05 — Consulting</em>
                   <strong>Obelisk Solutions</strong>
@@ -326,7 +326,7 @@ export default function App() {
                 </span>
               </a>
               <a className="card" href="https://mamlakty.com/" target="_blank" rel="noopener" data-cursor="visit">
-                <span className="card-media"><img src="/ma.jpg" alt="Mamlakty e-commerce" loading="lazy" /></span>
+                <span className="card-media"><img src="/ma.webp" alt="Mamlakty e-commerce" loading="lazy" /></span>
                 <span className="card-body">
                   <em>06 — Commerce</em>
                   <strong>Mamlakty</strong>
@@ -335,7 +335,7 @@ export default function App() {
                 </span>
               </a>
               <a className="card" href="https://profamalkamal.com/" target="_blank" rel="noopener" data-cursor="visit">
-                <span className="card-media"><img src="/prof.png" alt="Prof. Amal Kamal academic platform" loading="lazy" /></span>
+                <span className="card-media"><img src="/prof.webp" alt="Prof. Amal Kamal academic platform" loading="lazy" /></span>
                 <span className="card-body">
                   <em>07 — Academia</em>
                   <strong>Prof. Amal Kamal</strong>
@@ -344,7 +344,7 @@ export default function App() {
                 </span>
               </a>
               <a className="card" href="https://ahmedos.pages.dev/" target="_blank" rel="noopener" data-cursor="visit">
-                <span className="card-media"><img src="/ah.jpg" alt="Dr. Ahmed Osama portfolio" loading="lazy" /></span>
+                <span className="card-media"><img src="/ah.webp" alt="Dr. Ahmed Osama portfolio" loading="lazy" /></span>
                 <span className="card-body">
                   <em>08 — Personal brand</em>
                   <strong>Dr. Ahmed Osama</strong>
@@ -353,7 +353,7 @@ export default function App() {
                 </span>
               </a>
               <a className="card" href="https://drmyahia.pages.dev/" target="_blank" rel="noopener" data-cursor="visit">
-                <span className="card-media"><img src="/mo.jpg" alt="Dr. Mohamed Yahia medical site" loading="lazy" /></span>
+                <span className="card-media"><img src="/mo.webp" alt="Dr. Mohamed Yahia medical site" loading="lazy" /></span>
                 <span className="card-body">
                   <em>09 — Medical</em>
                   <strong>Dr. Mohamed Yahia</strong>
@@ -528,20 +528,20 @@ export default function App() {
 
           <div className="footer-cols">
             <div>
-              <h4>Elsewhere</h4>
+              <h3>Elsewhere</h3>
               <a href="https://github.com/MGaweesh" target="_blank" rel="noopener">GitHub</a>
               <a href="https://linkedin.com/in/muhammad-gaweesh-780396174/" target="_blank" rel="noopener">LinkedIn</a>
               <a href="https://fb.com/mohamedgaweshking" target="_blank" rel="noopener">Facebook</a>
             </div>
             <div>
-              <h4>Here</h4>
+              <h3>Here</h3>
               <a href="#work">Work</a>
               <a href="#approach">Approach</a>
               <a href="#about">About</a>
               <a href="#contact">Contact</a>
             </div>
             <div>
-              <h4>Now</h4>
+              <h3>Now</h3>
               <p className="footer-now">Cairo, Egypt<br /><span data-clock>--:--</span> local time</p>
             </div>
           </div>

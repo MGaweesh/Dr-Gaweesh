@@ -1,0 +1,23 @@
+# Muhammad Gaweesh
+
+> Pharmacist turned software developer, based in Cairo, Egypt. Builds full-stack web apps and platforms for healthcare, education, commerce and consulting — end to end, from product decisions to deployment.
+
+Muhammad trained as a pharmacist and later moved into software development, carrying the same habit into both: check what a thing interacts with before you hand it over. He builds and ships production platforms rather than demos, and stays involved after launch.
+
+## Work
+
+- [MedCoreX](https://medcorex.org): Clinical decision-support platform for pharmacists — therapy monitoring, dosing, antimicrobial stewardship and pre-emptive alerts. Stack: React, Node.js, MongoDB, Docker.
+- [Sci Bridge](https://sci-bridge.org): Learning platform for scientists — on-demand courses, live sessions, payments, email automation and instant certificate generation.
+- [Tahfiz Quran Academy](https://tahfizquran.org/): Bilingual (Arabic/English) one-to-one Qur'an teaching platform with timezone-aware trial booking, recurring lessons, subscriptions and verifiable certificates.
+- [Techno Core](https://bta3al3ab.online/): Arabic-language game discovery hub — system requirements, community content and search, built with plain PHP and MySQL.
+- [Obelisk Solutions](https://obelisk-solutions.com/): Multilingual marketing site for an international consultancy.
+- [Mamlakty](https://mamlakty.com/): Mobile-first e-commerce store for mothers and children (WooCommerce).
+- [Prof. Amal Kamal](https://profamalkamal.com/): Bilingual academic platform for research, lectures and training news.
+- [Dr. Ahmed Osama](https://ahmedos.pages.dev/): Personal brand site optimized for fast loading on poor connections.
+- [Dr. Mohamed Yahia](https://drmyahia.pages.dev/): Medical information and booking site.
+
+## Contact
+
+- Email: gawesh1112@gmail.com
+- [GitHub](https://github.com/MGaweesh)
+- [LinkedIn](https://linkedin.com/in/muhammad-gaweesh-780396174/)

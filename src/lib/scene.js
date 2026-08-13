@@ -15,7 +15,7 @@
    Two formations are evaluated per vertex and blended, with a per-point
    stagger so the field reforms in a wave rather than snapping.
    ═══════════════════════════════════════════════════════════════════ */
-import * as THREE from "three";
+import { Color, BufferGeometry, BufferAttribute, Vector3, ShaderMaterial, WebGLRenderer, Scene, PerspectiveCamera, Group, Points, Clock } from "three";
 
 (() => {
   "use strict";
@@ -28,7 +28,7 @@ import * as THREE from "three";
 
   const readVar = (name, fallback) => {
     const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-    return new THREE.Color(v || fallback);
+    return new Color(v || fallback);
   };
 
   /* ── the lattice every formation is derived from ───────────────── */
@@ -59,11 +59,11 @@ import * as THREE from "three";
     }
   }
 
-  const geo = new THREE.BufferGeometry();
-  geo.setAttribute("position", new THREE.BufferAttribute(slot, 3));
-  geo.setAttribute("aLayer", new THREE.BufferAttribute(aLayer, 1));
-  geo.setAttribute("aSeed", new THREE.BufferAttribute(aSeed, 1));
-  geo.setAttribute("aIndex", new THREE.BufferAttribute(aIndex, 1));
+  const geo = new BufferGeometry();
+  geo.setAttribute("position", new BufferAttribute(slot, 3));
+  geo.setAttribute("aLayer", new BufferAttribute(aLayer, 1));
+  geo.setAttribute("aSeed", new BufferAttribute(aSeed, 1));
+  geo.setAttribute("aIndex", new BufferAttribute(aIndex, 1));
 
   /* ── shaders ───────────────────────────────────────────────────── */
   const NOISE = /* glsl */`
@@ -257,7 +257,7 @@ import * as THREE from "three";
     uBlend:     { value: 0 },
     uCount:     { value: COUNT },
     uSize:      { value: 4 },
-    uPointer:   { value: new THREE.Vector3(999, 999, 999) },
+    uPointer:   { value: new Vector3(999, 999, 999) },
     uPointerOn: { value: 0 },
     uWarmA:     { value: 1 },
     uWarmB:     { value: 0 },
@@ -266,20 +266,20 @@ import * as THREE from "three";
     uAccent:    { value: readVar("--accent", "#c34f22") }
   };
 
-  const material = new THREE.ShaderMaterial({
+  const material = new ShaderMaterial({
     uniforms, vertexShader: VERT, fragmentShader: FRAG,
     transparent: true, depthTest: false, depthWrite: false
   });
 
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  const renderer = new WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
   renderer.setClearColor(0x000000, 0);
 
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+  const scene = new Scene();
+  const camera = new PerspectiveCamera(40, 1, 0.1, 100);
   camera.position.set(0, 0, 6.2);
-  const rig = new THREE.Group();
-  rig.add(new THREE.Points(geo, material));
+  const rig = new Group();
+  rig.add(new Points(geo, material));
   scene.add(rig);
 
   /* ── per-formation look: warmth, presence, where it sits on screen ──
@@ -373,10 +373,10 @@ import * as THREE from "three";
   };
 
   /* ── loop ──────────────────────────────────────────────────────── */
-  const clock = new THREE.Clock();
+  const clock = new Clock();
   let ex = 0, ey = 0, easedOn = 0;
   let stage = 0, rigX = 1.5, rigY = 0.1, rigRX = 0.38, presence = 1;
-  const tmp = new THREE.Vector3();
+  const tmp = new Vector3();
 
   const frame = () => {
     requestAnimationFrame(frame);

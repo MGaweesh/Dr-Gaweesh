@@ -175,7 +175,7 @@ export default function App() {
               </svg>
             </span></h2>
             <p className="head-note">
-              Four flagship platforms engineered end to end — clearly detailing the core functionality, technical architecture, and technologies used.
+              Five flagship platforms engineered end to end — clearly detailing the core functionality, technical architecture, and technologies used.
             </p>
           </div>
 
@@ -297,6 +297,35 @@ export default function App() {
               </div>
             </article>
 
+            <article className="case" data-case="5" style={caseStyle(4)}>
+              <span className="case-ghost" aria-hidden="true">05</span>
+              <div className="case-inner">
+                <div className="case-visual" data-cursor="visit">
+                  <a href="https://bta3al3ab.online/" target="_blank" rel="noopener" data-tilt>
+                    <span className="frame">
+                      <img src="/techno-core.webp" srcSet="/techno-core-700.webp 700w, /techno-core.webp 1100w" sizes="(min-width: 1180px) 45vw, 92vw" alt="Techno Core Arabic gaming platform" loading="lazy" data-parallax />
+                    </span>
+                    <span className="visit">Visit&nbsp;→</span>
+                  </a>
+                  <p className="scribble scribble-case">hardware requirements<br />&amp; Arabic gaming hub.</p>
+                </div>
+
+                <div className="case-copy">
+                  <p className="case-no">05 <em>—</em> Gaming &amp; Media Hub</p>
+                  <h3>Techno Core</h3>
+                  <dl className="case-story">
+                    <dt>What It Does</dt>
+                    <dd>An interactive Arabic gaming portal and media discovery platform designed to help gamers explore games, check PC system compatibility, and access curated media.</dd>
+                    <dt>Key Features &amp; Workflow</dt>
+                    <dd>Custom hardware compatibility algorithm ("Can I Run It?"), game catalog database, curated trailer library, community articles, and high-performance search.</dd>
+                    <dt>Architecture &amp; Engineering</dt>
+                    <dd>Engineered with lightweight native PHP and MySQL without bulky frameworks, RESTful data modeling, and optimized right-to-left (RTL) rendering for fast loading on lower bandwidths.</dd>
+                  </dl>
+                  <ul className="chips"><li>PHP</li><li>MySQL</li><li>Vanilla JS</li><li>REST APIs</li><li>Arabic RTL</li><li>SEO</li></ul>
+                </div>
+              </div>
+            </article>
+
           </div>
         </section>
 
@@ -305,7 +334,7 @@ export default function App() {
           <div className="archive-pin">
             <div className="archive-head">
               <p className="kicker"><i></i>The rest of the shelf</p>
-              <h2>Six more, <span className="pen-wrap"><em>briefly.</em>
+              <h2>Five more, <span className="pen-wrap"><em>briefly.</em>
                 <svg className="pen" viewBox="0 0 420 28" preserveAspectRatio="none" aria-hidden="true">
                   <path d="M4 19C64 8 149 5 232 9c50 2 108 8 184 3" pathLength="1"></path>
                   <path className="pen-2" d="M18 25C82 15 168 12 251 16c46 2 99 6 151 2" pathLength="1"></path>
@@ -315,15 +344,6 @@ export default function App() {
             </div>
 
             <div className="rail" data-rail-track>
-              <a className="card" href="https://bta3al3ab.online/" target="_blank" rel="noopener" data-cursor="visit">
-                <span className="card-media"><img src="/techno-core.webp" alt="Techno Core Arabic gaming platform" loading="lazy" /></span>
-                <span className="card-body">
-                  <em>05 — Gaming &amp; Media Hub</em>
-                  <strong>Techno Core</strong>
-                  <span>An interactive Arabic gaming portal featuring a custom hardware requirements checker ("Can I Run It?"), curated trailers, community reviews, and high-performance search.</span>
-                  <b>PHP · MySQL · Vanilla JS · REST APIs · Arabic RTL · SEO</b>
-                </span>
-              </a>
               <a className="card" href="https://obelisk-solutions.com/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/Ob.webp" alt="Obelisk Solutions website" loading="lazy" /></span>
                 <span className="card-body">

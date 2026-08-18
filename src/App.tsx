@@ -137,7 +137,7 @@ export default function App() {
           </div>
 
           <ul className="tally" aria-label="A few numbers">
-            <li data-lift><strong data-count="9">0</strong><span>products shipped &amp; still running</span></li>
+            <li data-lift><strong data-count="10">0</strong><span>products shipped &amp; still running</span></li>
             <li data-lift><strong data-count="4">0</strong><span>platforms built end to end</span></li>
             <li data-lift><strong data-count="5">0</strong><span>industries I had to learn fast</span></li>
             <li data-lift><strong className="tally-odd">2am</strong><span>when most of it got written</span></li>
@@ -306,7 +306,7 @@ export default function App() {
           <div className="archive-pin">
             <div className="archive-head">
               <p className="kicker"><i></i>The rest of the shelf</p>
-              <h2>Five more, <span className="pen-wrap"><em>briefly.</em>
+              <h2>Six more, <span className="pen-wrap"><em>briefly.</em>
                 <svg className="pen" viewBox="0 0 420 28" preserveAspectRatio="none" aria-hidden="true">
                   <path d="M4 19C64 8 149 5 232 9c50 2 108 8 184 3" pathLength="1"></path>
                   <path className="pen-2" d="M18 25C82 15 168 12 251 16c46 2 99 6 151 2" pathLength="1"></path>
@@ -316,10 +316,19 @@ export default function App() {
             </div>
 
             <div className="rail" data-rail-track>
+              <a className="card" href="https://innovera-pharma.com/" target="_blank" rel="noopener" data-cursor="visit">
+                <span className="card-media"><img src="/innovera.webp" alt="Innovera Pharma Shopify store" loading="lazy" /></span>
+                <span className="card-body">
+                  <em>05 — Pharma Commerce</em>
+                  <strong>Innovera Pharma</strong>
+                  <span>A pharmaceutical e-commerce store engineered with Shopify CLI. Custom Liquid architecture, hand-crafted RTL layout, and streamlined checkout — pure code, not a drag-and-drop template.</span>
+                  <b>Shopify CLI · Liquid &amp; JS · Custom Theme · Arabic RTL</b>
+                </span>
+              </a>
               <a className="card" href="https://obelisk-solutions.com/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/Ob.webp" alt="Obelisk Solutions website" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>05 — Consulting</em>
+                  <em>06 — Consulting</em>
                   <strong>Obelisk Solutions</strong>
                   <span>A focused multilingual site for an international consultancy. Half the work was deleting — enquiries now arrive already knowing what they want.</span>
                   <b>Information architecture · Multilingual · SEO</b>
@@ -328,7 +337,7 @@ export default function App() {
               <a className="card" href="https://mamlakty.com/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/ma.webp" alt="Mamlakty e-commerce" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>06 — Commerce</em>
+                  <em>07 — Commerce</em>
                   <strong>Mamlakty</strong>
                   <span>A mobile-first shop for mothers and children. Built around finding the thing fast, then getting out.</span>
                   <b>WooCommerce · Payments · SEO</b>
@@ -337,7 +346,7 @@ export default function App() {
               <a className="card" href="https://profamalkamal.com/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/prof.webp" alt="Prof. Amal Kamal academic platform" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>07 — Academia</em>
+                  <em>08 — Academia</em>
                   <strong>Prof. Amal Kamal</strong>
                   <span>A bilingual home for research, lectures and training news — and a publishing flow she can run without me.</span>
                   <b>CMS · Arabic RTL · Content IA</b>
@@ -346,7 +355,7 @@ export default function App() {
               <a className="card" href="https://ahmedos.pages.dev/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/ah.webp" alt="Dr. Ahmed Osama portfolio" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>08 — Personal brand</em>
+                  <em>09 — Personal brand</em>
                   <strong>Dr. Ahmed Osama</strong>
                   <span>A fast, quiet professional presence. Loads in under a second on hotel wifi — that was the brief.</span>
                   <b>Frontend · Performance · Cloudflare</b>
@@ -355,7 +364,7 @@ export default function App() {
               <a className="card" href="https://drmyahia.pages.dev/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/mo.webp" alt="Dr. Mohamed Yahia medical site" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>09 — Medical</em>
+                  <em>10 — Medical</em>
                   <strong>Dr. Mohamed Yahia</strong>
                   <span>Patient information and booking, written for someone worried and in a hurry.</span>
                   <b>Medical UX · Booking · Edge deploy</b>

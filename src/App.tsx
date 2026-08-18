@@ -175,8 +175,7 @@ export default function App() {
               </svg>
             </span></h2>
             <p className="head-note">
-              Four I'm proud of, written out honestly — what was actually wrong,
-              what I built, and what I'd do differently.
+              Four flagship platforms engineered end to end — clearly detailing the core functionality, technical architecture, and technologies used.
             </p>
           </div>
 
@@ -192,21 +191,21 @@ export default function App() {
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
-                  <p className="scribble scribble-case">I've stood behind<br />that counter at 3am.<br />every screen shows it.</p>
+                  <p className="scribble scribble-case">clinical alerts before<br />the mistake, not after.</p>
                 </div>
 
                 <div className="case-copy">
-                  <p className="case-no">01 <em>—</em> Healthcare</p>
+                  <p className="case-no">01 <em>—</em> Healthcare SaaS</p>
                   <h3>MedCoreX</h3>
                   <dl className="case-story">
-                    <dt>What was wrong</dt>
-                    <dd>Pharmacists — my own people — were doing dose calculations on paper, at 3am, for patients who couldn't wait for a second opinion.</dd>
-                    <dt>What I built</dt>
-                    <dd>A clinical decision-support platform — therapy monitoring, dosing, antimicrobial stewardship, and alerts that fire <em>before</em> the mistake, not after.</dd>
-                    <dt>What it cost me</dt>
-                    <dd>Six rewrites of the alert logic. Too many alerts is the same as none — the hard part was deciding what stays quiet.</dd>
+                    <dt>What It Does</dt>
+                    <dd>A clinical decision-support and pharmacy management SaaS platform engineered for hospital pharmacists and medical teams to monitor patient therapies, calculate complex doses, and prevent adverse drug events.</dd>
+                    <dt>Key Features &amp; Workflow</dt>
+                    <dd>Automated renal/hepatic dose calculators, antimicrobial stewardship protocols, real-time drug-drug interaction screening, and pre-emptive clinical alert algorithms.</dd>
+                    <dt>Architecture &amp; Engineering</dt>
+                    <dd>Modular full-stack web architecture with role-based access control (RBAC), high-throughput clinical calculation engines, and containerized deployment.</dd>
                   </dl>
-                  <ul className="chips"><li>React</li><li>Node.js</li><li>MongoDB</li><li>Docker</li></ul>
+                  <ul className="chips"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Docker</li><li>REST APIs</li><li>JWT Auth</li></ul>
                 </div>
               </div>
             </article>
@@ -221,21 +220,21 @@ export default function App() {
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
-                  <p className="scribble scribble-case">the certificate PDF took<br />three days. worth it —<br />it's the part people share.</p>
+                  <p className="scribble scribble-case">live rooms, automated<br />courses &amp; instant PDFs.</p>
                 </div>
 
                 <div className="case-copy">
-                  <p className="case-no">02 <em>—</em> Education</p>
+                  <p className="case-no">02 <em>—</em> EdTech Platform</p>
                   <h3>Sci Bridge</h3>
                   <dl className="case-story">
-                    <dt>What was wrong</dt>
-                    <dd>A team of scientists had courses, live sessions, payments and certificates spread across five tools that never spoke to each other.</dd>
-                    <dt>What I built</dt>
-                    <dd>One platform: on-demand courses, interactive cases, live rooms, payments, email automation, and certificates that generate the moment someone finishes.</dd>
-                    <dt>What I learned</dt>
-                    <dd>Nobody cares about your architecture. They care that the live session starts on time and the receipt arrives.</dd>
+                    <dt>What It Does</dt>
+                    <dd>An end-to-end scientific learning and training ecosystem connecting researchers and healthcare practitioners with structured interactive masterclasses and certifications.</dd>
+                    <dt>Key Features &amp; Workflow</dt>
+                    <dd>On-demand video curriculum, interactive case studies, integrated live broadcast rooms, automated payment gateway checkouts, and transactional email automations.</dd>
+                    <dt>Architecture &amp; Engineering</dt>
+                    <dd>Direct integration with Jitsi Meet API for low-latency live sessions, custom headless PDF generation engine for instant verifiable certificates, and payment webhook reconciliation.</dd>
                   </dl>
-                  <ul className="chips"><li>Jitsi</li><li>Fawaterak</li><li>Brevo</li><li>PDF automation</li></ul>
+                  <ul className="chips"><li>React</li><li>Node.js</li><li>Jitsi Meet API</li><li>Fawaterak / Kashier</li><li>Brevo API</li><li>PDF Automation</li></ul>
                 </div>
               </div>
             </article>
@@ -244,27 +243,27 @@ export default function App() {
               <span className="case-ghost" aria-hidden="true">03</span>
               <div className="case-inner">
                 <div className="case-visual" data-cursor="visit">
-                  <a href="https://tahfizquran.org/" target="_blank" rel="noopener" data-tilt>
+                  <a href="https://innovera-pharma.com/" target="_blank" rel="noopener" data-tilt>
                     <span className="frame">
-                      <img src="/tahfiz.webp" srcSet="/tahfiz-700.webp 700w, /tahfiz.webp 1100w" sizes="(min-width: 1180px) 45vw, 92vw" alt="Tahfiz Quran Academy platform" loading="lazy" data-parallax />
+                      <img src="/innovera.webp" alt="Innovera Pharma Shopify Store" loading="lazy" data-parallax />
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
-                  <p className="scribble scribble-case">a teacher's memory,<br />finally written down.</p>
+                  <p className="scribble scribble-case">Shopify CLI &amp; Liquid.<br />pure code, zero bloat.</p>
                 </div>
 
                 <div className="case-copy">
-                  <p className="case-no">03 <em>—</em> Newest · Education</p>
-                  <h3>Tahfiz Quran Academy</h3>
+                  <p className="case-no">03 <em>—</em> E-Commerce (Shopify)</p>
+                  <h3>Innovera Pharma</h3>
                   <dl className="case-story">
-                    <dt>What was wrong</dt>
-                    <dd>One-to-one Qur'an teaching across a dozen time zones was running on messages and memory. One teacher held every student's mistakes in his head, and a certificate was only as good as the word behind it.</dd>
-                    <dt>What I built</dt>
-                    <dd>A bilingual platform for one-to-one lessons: a free trial booking that does the timezone maths for you, recurring weekly slots, subscriptions across three programmes, and certificates you can actually verify.</dd>
-                    <dt>The part I'd defend</dt>
-                    <dd>Mistakes are recorded <em>against the verse they happened on</em>, and revision is generated from them. You practise what you personally keep getting wrong — not a generic schedule someone printed once.</dd>
+                    <dt>What It Does</dt>
+                    <dd>A dedicated direct-to-consumer e-commerce storefront for a pharmaceutical and healthcare brand, featuring medical performance sprays and joint/muscle relief products.</dd>
+                    <dt>Key Features &amp; Workflow</dt>
+                    <dd>High-converting product detail pages, streamlined privacy-focused checkout flows, dynamic product recommendations, and custom conversion tracking.</dd>
+                    <dt>Architecture &amp; Engineering</dt>
+                    <dd>Built from scratch using the Shopify CLI, bespoke Liquid templates, optimized Vanilla JS and CSS, native Arabic RTL support, and zero off-the-shelf theme bloat.</dd>
                   </dl>
-                  <ul className="chips"><li>Bilingual RTL</li><li>Scheduling &amp; timezones</li><li>Subscriptions</li><li>Zoom</li></ul>
+                  <ul className="chips"><li>Shopify CLI</li><li>Liquid Engine</li><li>Vanilla JS &amp; CSS</li><li>Storefront API</li><li>Arabic RTL</li><li>Meta Pixel</li></ul>
                 </div>
               </div>
             </article>
@@ -273,27 +272,27 @@ export default function App() {
               <span className="case-ghost" aria-hidden="true">04</span>
               <div className="case-inner">
                 <div className="case-visual" data-cursor="visit">
-                  <a href="https://bta3al3ab.online/" target="_blank" rel="noopener" data-tilt>
+                  <a href="https://tahfizquran.org/" target="_blank" rel="noopener" data-tilt>
                     <span className="frame">
-                      <img src="/techno-core.webp" srcSet="/techno-core-700.webp 700w, /techno-core.webp 1100w" sizes="(min-width: 1180px) 45vw, 92vw" alt="Techno Core Arabic gaming platform" loading="lazy" data-parallax />
+                      <img src="/tahfiz.webp" srcSet="/tahfiz-700.webp 700w, /tahfiz.webp 1100w" sizes="(min-width: 1180px) 45vw, 92vw" alt="Tahfiz Quran Academy platform" loading="lazy" data-parallax />
                     </span>
                     <span className="visit">Visit&nbsp;→</span>
                   </a>
-                  <p className="scribble scribble-case">no framework.<br />just me and MySQL.<br />still holds up.</p>
+                  <p className="scribble scribble-case">timezone-aware booking<br />&amp; 1-on-1 live lessons.</p>
                 </div>
 
                 <div className="case-copy">
-                  <p className="case-no">04 <em>—</em> Gaming</p>
-                  <h3>Techno Core</h3>
+                  <p className="case-no">04 <em>—</em> Live Learning / EdTech</p>
+                  <h3>Tahfiz Quran Academy</h3>
                   <dl className="case-story">
-                    <dt>What was wrong</dt>
-                    <dd>Arabic gaming content lived in scattered forum posts and reposts. To find out whether a game would run on your machine, you were reading a five-year-old thread.</dd>
-                    <dt>What I built</dt>
-                    <dd>An Arabic discovery hub for games, system requirements and community — with the content modelled properly so search could actually reach it. Plain PHP and MySQL, no framework.</dd>
-                    <dt>What it taught me</dt>
-                    <dd>It's the one I still open on my own phone, and the project that taught me most about writing right-to-left for someone on a bad connection.</dd>
+                    <dt>What It Does</dt>
+                    <dd>A global bilingual platform for one-to-one Qur'an memorization and Tajweed tutoring, serving international students across multiple global timezones.</dd>
+                    <dt>Key Features &amp; Workflow</dt>
+                    <dd>Automated timezone-converting trial booking, recurring weekly lesson scheduling, tiered monthly subscription management, verse-level mistake tracking, and verifiable certificates.</dd>
+                    <dt>Architecture &amp; Engineering</dt>
+                    <dd>Dynamic calendar engine with automatic UTC timezone synchronization, automated Zoom meeting generation, recurring payment gateway integration, and fully responsive RTL/LTR interface.</dd>
                   </dl>
-                  <ul className="chips"><li>PHP</li><li>MySQL</li><li>Arabic RTL</li><li>SEO</li></ul>
+                  <ul className="chips"><li>Next.js</li><li>Node.js</li><li>Stripe / Payments</li><li>Zoom API</li><li>Timezone Engine</li><li>Bilingual RTL</li></ul>
                 </div>
               </div>
             </article>
@@ -316,58 +315,58 @@ export default function App() {
             </div>
 
             <div className="rail" data-rail-track>
-              <a className="card" href="https://innovera-pharma.com/" target="_blank" rel="noopener" data-cursor="visit">
-                <span className="card-media"><img src="/innovera.webp" alt="Innovera Pharma Shopify store" loading="lazy" /></span>
+              <a className="card" href="https://bta3al3ab.online/" target="_blank" rel="noopener" data-cursor="visit">
+                <span className="card-media"><img src="/techno-core.webp" alt="Techno Core Arabic gaming platform" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>05 — Pharma Commerce</em>
-                  <strong>Innovera Pharma</strong>
-                  <span>A pharmaceutical e-commerce store engineered with Shopify CLI. Custom Liquid architecture, hand-crafted RTL layout, and streamlined checkout — pure code, not a drag-and-drop template.</span>
-                  <b>Shopify CLI · Liquid &amp; JS · Custom Theme · Arabic RTL</b>
+                  <em>05 — Gaming &amp; Media Hub</em>
+                  <strong>Techno Core</strong>
+                  <span>An interactive Arabic gaming portal featuring a custom hardware requirements checker ("Can I Run It?"), curated trailers, community reviews, and high-performance search.</span>
+                  <b>PHP · MySQL · Vanilla JS · REST APIs · Arabic RTL · SEO</b>
                 </span>
               </a>
               <a className="card" href="https://obelisk-solutions.com/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/Ob.webp" alt="Obelisk Solutions website" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>06 — Consulting</em>
+                  <em>06 — Corporate Consulting</em>
                   <strong>Obelisk Solutions</strong>
-                  <span>A focused multilingual site for an international consultancy. Half the work was deleting — enquiries now arrive already knowing what they want.</span>
-                  <b>Information architecture · Multilingual · SEO</b>
+                  <span>A structured multilingual corporate presence for an international management consultancy, architected for high brand authority, service clarity, and inbound lead generation.</span>
+                  <b>HTML5 / CSS3 / JS · Multilingual i18n · SEO Architecture · Performance</b>
                 </span>
               </a>
               <a className="card" href="https://mamlakty.com/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/ma.webp" alt="Mamlakty e-commerce" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>07 — Commerce</em>
+                  <em>07 — Commerce Store</em>
                   <strong>Mamlakty</strong>
-                  <span>A mobile-first shop for mothers and children. Built around finding the thing fast, then getting out.</span>
-                  <b>WooCommerce · Payments · SEO</b>
+                  <span>A mobile-first e-commerce store for mother and childcare products, featuring end-to-end catalog management, inventory tracking, and localized payment gateway integration.</span>
+                  <b>WooCommerce · WordPress · PHP · MySQL · Payment Gateways · SEO</b>
                 </span>
               </a>
               <a className="card" href="https://profamalkamal.com/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/prof.webp" alt="Prof. Amal Kamal academic platform" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>08 — Academia</em>
+                  <em>08 — Academic &amp; Research</em>
                   <strong>Prof. Amal Kamal</strong>
-                  <span>A bilingual home for research, lectures and training news — and a publishing flow she can run without me.</span>
-                  <b>CMS · Arabic RTL · Content IA</b>
+                  <span>A bilingual academic knowledge hub for postgraduate studies leadership, organizing scientific research papers, university lectures, and training announcements into a streamlined CMS.</span>
+                  <b>Custom CMS · PHP · MySQL · Arabic RTL · Content IA · Schema.org</b>
                 </span>
               </a>
               <a className="card" href="https://ahmedos.pages.dev/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/ah.webp" alt="Dr. Ahmed Osama portfolio" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>09 — Personal brand</em>
+                  <em>09 — Personal Branding</em>
                   <strong>Dr. Ahmed Osama</strong>
-                  <span>A fast, quiet professional presence. Loads in under a second on hotel wifi — that was the brief.</span>
-                  <b>Frontend · Performance · Cloudflare</b>
+                  <span>An ultra-lightweight professional portfolio engineered for instantaneous load times under 1 second on low-bandwidth connections, highlighting credentials and direct contact paths.</span>
+                  <b>Vanilla HTML5/CSS3 · Modern JS · Cloudflare Pages · Edge CDN</b>
                 </span>
               </a>
               <a className="card" href="https://drmyahia.pages.dev/" target="_blank" rel="noopener" data-cursor="visit">
                 <span className="card-media"><img src="/mo.webp" alt="Dr. Mohamed Yahia medical site" loading="lazy" /></span>
                 <span className="card-body">
-                  <em>10 — Medical</em>
+                  <em>10 — Medical &amp; Booking</em>
                   <strong>Dr. Mohamed Yahia</strong>
-                  <span>Patient information and booking, written for someone worried and in a hurry.</span>
-                  <b>Medical UX · Booking · Edge deploy</b>
+                  <span>A patient-centered medical portal and consultation booking hub with structured clinical specialties, patient education guides, and direct clinic appointment reservation.</span>
+                  <b>JAMstack · Cloudflare Pages · Appointment System · Medical UX</b>
                 </span>
               </a>
               <div className="card card-end">

@@ -6,16 +6,16 @@ Muhammad trained as a pharmacist and later moved into software development, carr
 
 ## Work
 
-- [MedCoreX](https://medcorex.org): Clinical decision-support platform for pharmacists — therapy monitoring, dosing, antimicrobial stewardship and pre-emptive alerts. Stack: React, Node.js, MongoDB, Docker.
-- [Sci Bridge](https://sci-bridge.org): Learning platform for scientists — on-demand courses, live sessions, payments, email automation and instant certificate generation.
-- [Tahfiz Quran Academy](https://tahfizquran.org/): Bilingual (Arabic/English) one-to-one Qur'an teaching platform with timezone-aware trial booking, recurring lessons, subscriptions and verifiable certificates.
-- [Techno Core](https://bta3al3ab.online/): Arabic-language game discovery hub — system requirements, community content and search, built with plain PHP and MySQL.
-- [Innovera Pharma](https://innovera-pharma.com/): Pharmaceutical e-commerce storefront engineered with Shopify CLI and custom Liquid/JS code rather than off-the-shelf customization. Features custom RTL UI, performance optimizations and seamless checkout.
-- [Obelisk Solutions](https://obelisk-solutions.com/): Multilingual marketing site for an international consultancy.
-- [Mamlakty](https://mamlakty.com/): Mobile-first e-commerce store for mothers and children (WooCommerce).
-- [Prof. Amal Kamal](https://profamalkamal.com/): Bilingual academic platform for research, lectures and training news.
-- [Dr. Ahmed Osama](https://ahmedos.pages.dev/): Personal brand site optimized for fast loading on poor connections.
-- [Dr. Mohamed Yahia](https://drmyahia.pages.dev/): Medical information and booking site.
+- [MedCoreX](https://medcorex.org): Clinical decision-support and pharmacy management SaaS platform for hospital pharmacists and healthcare teams — therapy monitoring, renal/hepatic dosing calculators, antimicrobial stewardship protocols, real-time drug interaction screening, and clinical alerts. Stack: React, Node.js, Express, MongoDB, Docker, REST APIs, JWT Auth.
+- [Sci Bridge](https://sci-bridge.org): Scientific EdTech & training platform connecting researchers with interactive education — on-demand video courses, clinical case studies, live webinar rooms (Jitsi Meet API), automated payment checkouts (Fawaterak/Kashier), Brevo email automations, and verifiable PDF certificate generation.
+- [Innovera Pharma](https://innovera-pharma.com/): Pharmaceutical e-commerce storefront engineered from scratch via Shopify CLI (pure code, zero pre-made template bloat) — custom Liquid architecture, bespoke Vanilla JS/CSS, conversion-optimized checkout, and native Arabic RTL.
+- [Tahfiz Quran Academy](https://tahfizquran.org/): Global bilingual (Arabic/English) live education platform for 1-on-1 Qur'an tutoring — automated timezone-converting trial booking, recurring weekly scheduling, tiered subscriptions, verse-level mistake tracking, and Zoom API automation. Stack: Next.js, Node.js, Stripe, Zoom API, Timezone Engine.
+- [Techno Core](https://bta3al3ab.online/): Interactive Arabic gaming portal and media discovery platform — custom system requirements checker ("Can I Run It?"), curated trailers, community articles, and high-performance search. Stack: PHP, MySQL, Vanilla JS, REST APIs, Arabic RTL, SEO.
+- [Obelisk Solutions](https://obelisk-solutions.com/): Multilingual corporate digital presence for an international consultancy — structured service catalog, client case studies, and conversion-focused lead generation pipeline. Stack: HTML5, CSS3, JS, Multilingual i18n, SEO Architecture.
+- [Mamlakty](https://mamlakty.com/): Mobile-first e-commerce store for mother and childcare products — catalog management, inventory tracking, payment gateway integrations, and speed/SEO optimization (WooCommerce, WordPress, PHP, MySQL).
+- [Prof. Amal Kamal](https://profamalkamal.com/): Bilingual academic portal for postgraduate studies leadership — organizing scientific research publications, lectures, and training opportunities with a custom publishing CMS. Stack: Custom CMS, PHP, MySQL, Arabic RTL, Schema.org.
+- [Dr. Ahmed Osama](https://ahmedos.pages.dev/): Ultra-lightweight professional portfolio engineered for sub-second load times on low-bandwidth networks, showcasing credentials and direct contact channels. Stack: Vanilla HTML5/CSS3, Modern JS, Cloudflare Pages, Edge CDN.
+- [Dr. Mohamed Yahia](https://drmyahia.pages.dev/): Medical consultation and patient booking portal — structured clinical specialties, patient education guides, and direct clinic appointment reservation. Stack: JAMstack, Cloudflare Pages, Appointment Booking, Medical UX.
 
 ## Contact
 
